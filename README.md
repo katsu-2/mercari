@@ -19,6 +19,11 @@
 |block_num|string|null: false|
 |building_name|string|
 
+### Association
+- has_many :items
+- has_many :profits
+- has_many :likes
+- has_many :comments
 
 
 ## Itemsテーブル
@@ -41,6 +46,17 @@
 |image_id|references|null: false, foreign_key: true|
 |like_id|references|null: false, foreign_key: true|
 
+###Association
+- has_many   :comments
+- has_many   :brands
+- has_many   :images
+- has_many   :profits
+- has_many   :likes
+- belongs_to :user
+- belongs_to :category
+- belongs_to :second_category
+- belongs_to :thirs_category
+
 
 
 ## Profitsテーブル
@@ -52,6 +68,10 @@
 |user_id|references|null: false, foreign_key: true|
 |item_id|references|null: false, foreign_key: true|
 
+### Association
+- has_many :users
+- has_many :items
+
 
 
 ## Comments
@@ -62,6 +82,10 @@
 |user_id|references|null: false, foreign_key: true|
 |item_id|references|null: false, foreign_key: true|
 
+### Association
+- belongs_to :user
+- belongs_to :item
+
 
 
 ## Likesテーブル
@@ -69,6 +93,10 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |item_id|references|null: false, foreign_key: true|
+
+### Association
+-belongs_to :user
+-belongs_to :item
 
 
 
@@ -78,6 +106,11 @@
 |brand|string|
 |category_id|references|foreign_key: true|
 
+### Association
+- belongs_to :item
+- has_many   :brand_categories
+- has_many   :categories, through: :brand_categories
+
 
 
 ## Brand_categoriesテーブル
@@ -86,6 +119,10 @@
 |brand_id|references :brand|foreign_key: true|
 |category_id|references :categpry|foreign_key: true|
 
+### Association
+- belongs_to :brand
+- belongs_to :category
+
 
 
 ## Imagesテーブル
@@ -93,12 +130,21 @@
 |------|----|-------|
 |image|text|null: false|
 
+### Association
+- belongs_to :item
+
 
 
 ## Categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+
+### Association
+- has_many :items
+- has_many :second_categories
+- has_many :brands
+- has_many :brands, through: :brand_categories
 
 
 
@@ -108,6 +154,12 @@
 |name|string|null: false|
 |category_id|references :category|null: false, foreign_key: true|
 
+### Association
+- has_many   :third_categories
+- belongs_to :category
+
+
+
 
 
 ## Third_categoriesテーブル
@@ -116,6 +168,8 @@
 |name|string|null: false|
 |second_category_id|references :second_category|null: false, foreign_key: true|
 
+### Association
+- belongs_to :second_category
 
 
 
