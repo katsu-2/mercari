@@ -32,14 +32,14 @@
 |delivery_fee|string|null: false|
 |delivery_date|string|null: false|
 |delivery_way|string|null: false|
-|user_id|references :user|null: false, foreign_key: true|
-|category_id|references :category|null: false, foreign_key: true|
-|second_category_id|references :second_category|null: false, foreign_key: true|
-|third_category_id|references :third_category|null: false, foreign_key: true|
-|brand_id|references :brand|null: false, foreign_key: true|
-|comment_id|references :comment|null: false, foreign_key: true|
-|image_id|references :image|null: false, foreign_key: true|
-|like_id|references :like|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|category_id|references|null: false, foreign_key: true|
+|second_category_id|references|null: false, foreign_key: true|
+|third_category_id|references|null: false, foreign_key: true|
+|brand_id|references|null: false, foreign_key: true|
+|comment_id|references|null: false, foreign_key: true|
+|image_id|references|null: false, foreign_key: true|
+|like_id|references|null: false, foreign_key: true|
 
 
 
@@ -49,8 +49,8 @@
 |profit|integer|
 |profit_log|string|
 |expiration_date|daytime|
-|user_id|references :user|null: false, foreign_key: true|
-|item_id|references :item|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
 
 
 
@@ -59,16 +59,16 @@
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|null: false|
-|user_id|references :user|null: false, foreign_key: true|
-|item_id|references :item|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
 
 
 
 ## Likesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references :user|null: false, foreign_key: true|
-|item_id|references :item|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
 
 
 
@@ -76,7 +76,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string|
-|category_id|references :category|foreign_key: true|
+|category_id|references|foreign_key: true|
 
 
 
