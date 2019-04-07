@@ -59,6 +59,14 @@
 
 
 
+## Cartsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
+
+
+
 ## Profitsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -69,8 +77,8 @@
 |item_id|references|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
-- has_many :items
+- belongs_to :user
+- belongs_to :item
 
 
 
@@ -129,6 +137,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|text|null: false|
+|item_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :item
@@ -143,8 +152,11 @@
 ### Association
 - has_many :items
 - has_many :second_categories
+- has_many :second_categories, through::category_seconds
 - has_many :brands
 - has_many :brands, through: :brand_categories
+
+
 
 
 
@@ -152,13 +164,12 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|category_id|references :category|null: false, foreign_key: true|
 
 ### Association
 - has_many   :third_categories
-- belongs_to :category
-
-
+- has_many   :third_categories, through::second_third
+- has_many   :category
+- has_many   :category, through::category_second
 
 
 
@@ -166,10 +177,34 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|second_category_id|references :second_category|null: false, foreign_key: true|
+
+### Association
+- has_many :second_category
+- has_many :second_category, through::second_third
+
+
+
+## Category_secondsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|category_id|references|null: false, foreign_key: true|
+|second_category_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :category
+- belongs_to :second_category
+
+
+
+## Second_thirdテーブル
+|Column|Type|Options|
+|------|----|-------|
+|second_category_id|references|null: false, foreign_key: true|
+|third_category_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :second_category
+- belongs_to :third_category
 
 
 
