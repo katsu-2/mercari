@@ -24,6 +24,8 @@
 - has_many :profits
 - has_many :likes
 - has_many :comments
+- belongs_to :cart
+
 
 
 ## Itemsテーブル
@@ -56,6 +58,7 @@
 - belongs_to :category
 - belongs_to :second_category
 - belongs_to :thirs_category
+- belongs_to :cart
 
 
 
@@ -64,6 +67,10 @@
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |item_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :item
 
 
 
