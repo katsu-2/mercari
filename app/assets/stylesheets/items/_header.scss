@@ -15,75 +15,84 @@ header {
 #header-logo {
   padding-top: 7px;
   float: left;
+
+  & a {
+    display: block;
+  }
+
+  & img {
+    width: 134px;
+    vertical-align: middle;
+  }
 }
 
-#header-logo a {
-  display: block;
-}
 
-#header-logo img {
-  width: 134px;
-  vertical-align: middle;
-}
 
 #header-search-form {
   position: relative;
   width: calc(100% - (134px + 45px));
   float: right;
+
+  & input {
+    width: 100%;
+    background: #e6e6e6;
+    border-color: transparent;
+    border-radius: 2px;
+    height: 38px;
+  }
+
+  & i {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    width: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+    color: #AAAAAA;
+  }
 }
 
-#header-search-form input {
-  width: 100%;
-  background: #e6e6e6;
-  border-color: transparent;
-  border-radius: 2px;
-  height: 38px;
-}
 
-#header-search-form i {
-  position: absolute;
-  top: 2px;
-  right: 8px;
-  width: 36px;
-  line-height: 36px;
-  cursor: pointer;
-  text-align: center;
-  color: #AAAAAA;
-}
 
 #header-nav {
   float: left;
+
+  &__list {
+
+    & li {
+      position: relative;
+      display: inline-block;
+      padding: 0 22px 0 0;
+    }
+
+    & li h2{
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    & li h2 a{
+      display: block;
+      position: relative;
+      height: 42px;
+      line-height: 32px;
+      color: #333;
+    }
+
+    & li h2 a i{
+      color: #EA352D;
+      font-size: 12px;
+      margin-right: 4px;
+    }
+
+    & li h2 a span{
+      vertical-align: middle;
+      font-weight: bold;
+    }
+  }
 }
 
-#header-nav__list li {
-  position: relative;
-  display: inline-block;
-  padding: 0 22px 0 0;
-}
 
-#header-nav__list li h2{
-  font-size: 14px;
-  font-weight: 400;
-}
-
-#header-nav__list li h2 a{
-  display: block;
-  position: relative;
-  height: 42px;
-  line-height: 32px;
-  color: #333;
-}
-
-#header-nav__list li h2 a i{
-  color: #EA352D;
-  font-size: 12px;
-  margin-right: 4px;
-}
-
-#header-nav__list li h2 a span{
-  vertical-align: middle;
-  font-weight: bold;
-}
 
 #header-login {
   float: right;
