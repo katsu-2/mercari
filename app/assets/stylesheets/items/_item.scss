@@ -91,6 +91,18 @@ text-align: center;
   color: #333;
 }
 
+.items-box__body__info__likes i {
+    margin: 0 4px 0 0;
+    vertical-align: middle;
+    color: #ccc;
+  }
+
+.items-box__body__info__likes span {
+  display: inline-block;
+  margin: 1px 0 0;
+  vertical-align: middle;
+}
+
 .items-box__body__info__tax {
   font-size: 10px;
   clear: both;
