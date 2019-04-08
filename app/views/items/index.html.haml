@@ -3,7 +3,7 @@
   #header-innner
     .clearfix
       #header-logo
-        %a{:href => "#"}
+        = link_to items_path do
           %img{:alt => "", :src => "logo.png"}/
       %form#header-search-form
         %input{:name => "search", :placeholder => "    何かお探しですか?", :type => "search"}/
@@ -13,20 +13,20 @@
         %ul#header-nav__list
           %li
             %h2
-              %a{:href => "#"}
+              = link_to items_path do
                 %i.fa.fa-list
                 %span カテゴリーから探す
           %li
             %h2
-              %a{:href => "#"}
+              = link_to items_path do
                 %i.fa.fa-shopping-bag
                 %span ブランドから探す
       #header-login
         %ul#header-login__nav
           %li
-            %a.header-login-btn{:href => "#"} ログイン
+            = link_to "ログイン", items_path, class: "header-login-btn"
           %li
-            %a.header-signup-btn{:href => "#"} 新規登録
+            = link_to "新規登録", items_path, class: "header-signup-btn"
 / ヘッダーここまで
 / メインイメージ
 %section#main-image
@@ -38,10 +38,10 @@
   / レディースアイテム新着アイテム
   %section.items-box-container.clearfix
     %h3.items-head
-      %a{:href => "#"} レディース 新着アイテム
+      = link_to "レディース 新着アイテム", items_path
     .items-box-contents.clearfix
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -53,7 +53,7 @@
                 %span 2
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -63,7 +63,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -73,7 +73,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -83,15 +83,15 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
     .view-all.clearfix
-      %a{:href => "#"} 全ての商品を見る
+      = link_to "全ての商品を見る", items_path
   / レディースアイテム新着アイテム ここまで
   / メンズアイテム新着アイテム
   %section.items-box-container.clearfix
     %h3.items-head
-      %a{:href => "#"} メンズ 新着アイテム
+      = link_to "メンズ 新着アイテム", items_path
     .items-box-contents.clearfix
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -101,7 +101,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -111,7 +111,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -121,7 +121,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -131,7 +131,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
     .view-all.clearfix
-      %a{:href => "#"} 全ての商品を見る
+      = link_to "全ての商品を見る", items_path
   / メンズアイテム新着アイテム ここまで
 / カテゴリー新着アイテム ここまで
 / カテゴリー新着アイテム
@@ -140,10 +140,10 @@
   / コーチ新着アイテム
   %section.items-box-container.clearfix
     %h3.items-head
-      %a{:href => "#"} コーチ 新着アイテム
+      = link_to "コーチ 新着アイテム", items_path
     .items-box-contents.clearfix
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -153,7 +153,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -163,7 +163,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -173,7 +173,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -183,15 +183,15 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
     .view-all.clearfix
-      %a{:href => "#"} 全ての商品を見る
+      = link_to "全ての商品を見る", items_path
   / コーチ新着アイテム ここまで
   / ルイヴィトン新着アイテム
   %section.items-box-container.clearfix
     %h3.items-head
-      %a{:href => "#"} ルイヴィトン 新着アイテム
+      = link_to "ルイヴィトン 新着アイテム", items_path
     .items-box-contents.clearfix
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -201,7 +201,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -211,7 +211,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -221,7 +221,7 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
       %section.items-box
-        %a{:href => "#"}
+        = link_to items_path do
           %figure.items-box__image
             %img{:src => "item.jpg"}/
           .items-box__body
@@ -231,13 +231,13 @@
               .items-box__body__info__likes
               %p.items-box__body__info__tax (税込)
     .view-all.clearfix
-      %a{:href => "#"} 全ての商品を見る
+      = link_to "全ての商品を見る", items_path
   / ルイヴィトン新着アイテム ここまで
 / ブランド新着アイテム ここまで
 / 補足情報
 %aside.app-banner
   .app-banner__mobile
-    %a{:href => "#"}
+    = link_to items_path do
       %figure.app-banner__icon
         %img{:src => "mercari_icon.png", :width => "50"}/
       .app-banner__text
@@ -251,59 +251,59 @@
       %h2.footer-head メルカリについて
       %ul
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
     .footer-cell
       %h2.footer-head メルカリについて
       %ul
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
     .footer-cell
       %h2.footer-head メルカリについて
       %ul
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
     .footer-cell
       %h2.footer-head メルカリについて
       %ul
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
     .footer-cell
       %h2.footer-head メルカリについて
       %ul
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
         %li
-          %a{:href => "#"} 会社概要(運営会社)
+          = link_to "会社概要(運営会社)", items_path
   .footer-bottom
-    %a{:href => "#"}
+    = link_to items_path do
       %img{:alt => "", :height => "33", :src => "footer-logo.png", :width => "124"}/
     %span.copy-right
       %small ©︎ 2019 Mercari
