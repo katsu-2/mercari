@@ -1,0 +1,125 @@
+header {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+#header-innner {
+  width: 70%;
+  margin: 0 auto;
+  padding: 8px 0 0;
+
+}
+
+
+#header-logo {
+  padding-top: 7px;
+  float: left;
+
+  & a {
+    display: block;
+  }
+
+  & img {
+    width: 134px;
+    vertical-align: middle;
+  }
+}
+
+
+
+#header-search-form {
+  position: relative;
+  width: calc(100% - (134px + 45px));
+  float: right;
+
+  & input {
+    width: 100%;
+    background: #e6e6e6;
+    border-color: transparent;
+    border-radius: 2px;
+    height: 38px;
+  }
+
+  & i {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    width: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+    color: #AAAAAA;
+  }
+}
+
+
+
+#header-nav {
+  float: left;
+
+  &__list {
+
+    & li {
+      position: relative;
+      display: inline-block;
+      padding: 0 22px 0 0;
+    }
+
+    & li h2{
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    & li h2 a{
+      display: block;
+      position: relative;
+      height: 42px;
+      line-height: 32px;
+      color: #333;
+    }
+
+    & li h2 a i{
+      color: #EA352D;
+      font-size: 12px;
+      margin-right: 4px;
+    }
+
+    & li h2 a span{
+      vertical-align: middle;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+#header-login {
+  float: right;
+}
+
+#header-login__nav li {
+  display: inline-block;
+}
+
+.header-login-btn {
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.header-signup-btn {
+  display: block;
+    border: 1px solid #0099e8;
+    background: #fff;
+    color: #0099e8;
+    padding: 0 10px;
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+}
