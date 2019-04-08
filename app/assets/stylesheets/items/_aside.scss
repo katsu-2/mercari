@@ -1,0 +1,32 @@
+.app-banner {
+
+}
+
+.app-banner__mobile {
+  text-align: center;
+}
+
+.app-banner__mobile a {
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+  display: block;
+  padding: 15px 0;
+}
+
+.app-banner__icon {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  vertical-align: top;
+}
+
+.app-banner__text {
+  display: inline-block;
+  padding-top: 2px;
+  text-align: left;
+}
+
+.app-banner__text span {
+  display: block;
+  font-size: 1.4em;
+  padding-top: 10px;
+}
