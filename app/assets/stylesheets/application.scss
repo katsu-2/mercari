@@ -1,1 +1,16 @@
-@import "items/items";
+@import "reset";
+@import "font-awesome";
+
+@import "items/header";
+@import "items/mainImage";
+@import "items/item";
+@import "items/aside";
+@import "items/footer";
+
+
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
