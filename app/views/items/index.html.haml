@@ -1,0 +1,313 @@
+/ ヘッダー
+%header
+  #header-innner
+    .clearfix
+      #header-logo
+        %a{:href => "#"}
+          %img{:alt => "", :src => "images/logo.png"}/
+      %form#header-search-form
+        %input{:name => "search", :placeholder => "    何かお探しですか?", :type => "search"}/
+        %i.fas.fa-search
+    #header-nav-box.clearfix
+      %nav#header-nav
+        %ul#header-nav__list
+          %li
+            %h2
+              %a{:href => "#"}
+                %i.fas.fa-list
+                %span カテゴリーから探す
+          %li
+            %h2
+              %a{:href => "#"}
+                %i.fas.fa-shopping-bag
+                %span ブランドから探す
+      #header-login
+        %ul#header-login__nav
+          %li
+            %a.header-login-btn{:href => "#"} ログイン
+          %li
+            %a.header-signup-btn{:href => "#"} 新規登録
+/ ヘッダーここまで
+/ メインイメージ
+%section#main-image
+  %img{:alt => "", :src => "images/mainImage.jpg"}/
+/ メインイメージ ここまで
+/ カテゴリー新着アイテム
+%section#pick-up-container
+  %h2.pick-up-head ピックアップカテゴリー
+  / レディースアイテム新着アイテム
+  %section.items-box-container.clearfix
+    %h3.items-head
+      %a{:href => "#"} レディース 新着アイテム
+    .items-box-contents.clearfix
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+    .view-all.clearfix
+      %a{:href => "#"} 全ての商品を見る
+  / レディースアイテム新着アイテム ここまで
+  / メンズアイテム新着アイテム
+  %section.items-box-container.clearfix
+    %h3.items-head
+      %a{:href => "#"} メンズ 新着アイテム
+    .items-box-contents.clearfix
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+    .view-all.clearfix
+      %a{:href => "#"} 全ての商品を見る
+  / メンズアイテム新着アイテム ここまで
+/ カテゴリー新着アイテム ここまで
+/ カテゴリー新着アイテム
+%section#pick-up-container
+  %h2.pick-up-head ピックアップブランド
+  / コーチ新着アイテム
+  %section.items-box-container.clearfix
+    %h3.items-head
+      %a{:href => "#"} コーチ 新着アイテム
+    .items-box-contents.clearfix
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+    .view-all.clearfix
+      %a{:href => "#"} 全ての商品を見る
+  / コーチ新着アイテム ここまで
+  / ルイヴィトン新着アイテム
+  %section.items-box-container.clearfix
+    %h3.items-head
+      %a{:href => "#"} ルイヴィトン 新着アイテム
+    .items-box-contents.clearfix
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+      %section.items-box
+        %a{:href => "#"}
+          %figure.items-box__image
+            %img{:src => "images/item.jpg"}/
+          .items-box__body
+            %h3.items-box__body__name チェックロングタイプ
+            .items-box__body__info.clearfix
+              .items-box__body__info__price ¥890
+              .items-box__body__info__likes
+              %p.items-box__body__info__tax (税込)
+    .view-all.clearfix
+      %a{:href => "#"} 全ての商品を見る
+  / ルイヴィトン新着アイテム ここまで
+/ ブランド新着アイテム ここまで
+/ 補足情報
+%aside.app-banner
+  .app-banner__mobile
+    %a{:href => "#"}
+      %figure.app-banner__icon
+        %img{:src => "images/mercari_icon.png", :width => "50"}/
+      .app-banner__text
+        スマホかんたんフリマアプリ
+        %span 今すぐ無料ダウンロード!
+/ 補足情報 ここまで
+/ フッター
+%footer#footer-wrap
+  %nav#footer-nav.clearfix
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+        %li
+          %a{:href => "#"} 会社概要(運営会社)
+  .footer-bottom
+    %a{:href => "#"}
+      %img{:alt => "", :height => "33", :src => "images/footer-logo.png", :width => "124"}/
+    %span.copy-right
+      %small ©︎ 2019 Mercari
+/ フッター ここまで
+/ 出品ボタン
+%a.exhibit-btn{:href => "#"}
+  %div 出品
+  %i.fas.fa-camera
+/ 出品ボタン ここまで
