@@ -17,11 +17,13 @@ text-align: center;
   font-size: 22px;
   text-align: center;
   margin: 26px 11px;
+
+  & a {
+    color: #0099e8;
+  }
 }
 
-.items-head a {
-  color: #0099e8;
-}
+
 
 .items-box-contents {
   width: auto;
@@ -34,88 +36,91 @@ text-align: center;
   background-color: white;
   position: relative;
   float: left;
-}
 
-.items-box a {
-  display: block;
-  color : black;
-}
-
-.items-box__image {
-  width: 213px;
-  height: 220px;
-  overflow: hidden;
-  position: relative;
-}
-
-.items-box__image img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  height: 220px;
-  object-fit: cover;
-
-}
-
-.items-box__body {
-  padding: 16px;
-  height: 110px;
-}
-
-.items-box__body__name {
-  overflow: hidden;
-  position: relative;
-  font-weight: 400;
-  height: 3em;
-  line-height: 1.5;
-  word-break: break-word;
-  white-space: normal;
-}
-
-.items-box__body__info {
-  margin: 8px 0 0;
-}
-
-.items-box__body__info__price {
-  font-size: 20px;
-  float: left;
-}
-
-.items-box__body__info__likes {
-  float: right;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
-}
-
-.items-box__body__info__likes i {
-    margin: 0 4px 0 0;
-    vertical-align: middle;
-    color: #ccc;
+  & a {
+    display: block;
+    color : black;
   }
 
-.items-box__body__info__likes span {
-  display: inline-block;
-  margin: 1px 0 0;
-  vertical-align: middle;
+  &__image {
+    width: 213px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 220px;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    padding: 16px;
+    height: 110px;
+
+    &__name {
+      overflow: hidden;
+      position: relative;
+      font-weight: 400;
+      height: 3em;
+      line-height: 1.5;
+      word-break: break-word;
+      white-space: normal;
+    }
+
+    &__info {
+      margin: 8px 0 0;
+
+      &__price {
+        font-size: 20px;
+        float: left;
+      }
+
+      &__likes {
+        float: right;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+
+        & i {
+          margin: 0 4px 0 0;
+          vertical-align: middle;
+          color: #ccc;
+        }
+
+        & span {
+          display: inline-block;
+          margin: 1px 0 0;
+          vertical-align: middle;
+        }
+      }
+
+      &__tax {
+        font-size: 10px;
+        clear: both;
+      }
+    }
+  }
 }
 
-.items-box__body__info__tax {
-  font-size: 10px;
-  clear: both;
-}
+
 
 .view-all {
   padding: 20px 0 30px;
   width: 99.5%;
   text-align: right;
+
+  & a {
+    color: #0099e8;
+    text-decoration: none;
+  }
 }
 
-.view-all a {
-  color: #0099e8;
-  text-decoration: none;
-}
+
 
