@@ -9,14 +9,6 @@
   margin: 0 auto;
 }
 
-.footer-cell {
-  display: block;
-  float: left;
-  padding: 0 20px 0 0;
-  margin-top: 18px;
-}
-
-
 .footer-head {
   color: #fff;
   font-size: 16px;
@@ -24,43 +16,54 @@
   line-height: 1.4;
 }
 
-.footer-cell ul li {
-  color: #fff;
-}
-
-.footer-cell ul li:first-child {
-  margin: 16px 0 0;
-}
-
-.footer-cell ul li {
-  margin: 14px 0 0;
-}
-
-.footer-cell ul li a {
+.footer-cell {
   display: block;
-  opacity: .7;
-  color: #fff;
-  font-size: 12px;
-  line-height: 1.5em;
+  float: left;
+  padding: 0 20px 0 0;
+  margin-top: 18px;
+
+
+  & ul li {
+    color: #fff;
+  }
+
+  & ul li:first-child {
+    margin: 16px 0 0;
+  }
+
+  & ul li {
+    margin: 14px 0 0;
+  }
+
+  & ul li a {
+    display: block;
+    opacity: .7;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
 }
 
 .footer-bottom {
   width: 70%;
   margin: 30px auto 20px;
+
+  & a {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5em;
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+  }
+
+  & a img {
+    vertical-align: middle;
+  }
 }
 
-.footer-bottom a {
-  color: #fff;
-  font-size: 12px;
-  line-height: 1.5em;
-  display: inline-block;
-  margin-right: 10px;
-  width: auto;
-}
 
-.footer-bottom a img {
-  vertical-align: middle;
-}
 
 .copy-right {
   width: 70%;
@@ -68,11 +71,13 @@
   margin: 8px 0 0;
   text-align: center;
   vertical-align: sub;
+
+  & small {
+    font-size: 12px;
+  }
 }
 
-.copy-right small {
-  font-size: 12px;
-}
+
 
 .exhibit-btn {
   position: fixed;
@@ -86,12 +91,14 @@
   background: #ea352d;
   color: #fff;
   text-align: center;
+
+  & div {
+    margin: 32px 0 0;
+  }
+  & i {
+    margin: 8px 0 0;
+    font-size: 54px;
+  }
 }
 
-.exhibit-btn div {
-  margin: 32px 0 0;
-}
-.exhibit-btn i {
-  margin: 8px 0 0;
-  font-size: 54px;
-}
+
