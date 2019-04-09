@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
+
     #サインアップ
     get "signup" => "users/registrations#signup"
   end
