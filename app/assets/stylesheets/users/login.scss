@@ -31,17 +31,14 @@ main {
 
       .btn-sns-facebook {
         margin: 0;
-        background: #385185;
-        color: $white;
+        @include facebook;
 
         &__icon {
           font-size: 26px;
         }
       }
       .btn-sns-google {
-        margin: 16px 0 0;
-        background: $white;
-        border: #979797 solid 1px;
+        @include google;
 
         &__icon {
           font-size: 26px;
