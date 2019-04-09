@@ -5,7 +5,7 @@ main {
     max-width: none;
     width: 456px;
     margin: 0 auto;
-    background: #fff;
+    background: $white;
 
     .no__account {
       padding: 40px 64px;
@@ -20,7 +20,7 @@ main {
         margin: 8px 0 0;
         border: 1px solid #0099e8;
         background: #0099e8;
-        color: #fff;
+        color: $white;
         line-height: 40px;
       }
     }
@@ -32,7 +32,7 @@ main {
       .btn-sns-facebook {
         margin: 0;
         background: #385185;
-        color: #fff;
+        color: $white;
 
         &__icon {
           font-size: 26px;
@@ -40,7 +40,7 @@ main {
       }
       .btn-sns-google {
         margin: 16px 0 0;
-        background: #fff;
+        background: $white;
         border: #979797 solid 1px;
 
         &__icon {
@@ -67,7 +67,7 @@ main {
         .btn-red {
           background: #ea352d;
           border: 1px solid #ea352d;
-          color: #fff;
+          color: $white;
         }
       }
       &__forget {
