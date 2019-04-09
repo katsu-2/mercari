@@ -2,6 +2,18 @@ $gray: #f5f5f5;
 $black: #333;
 $white: #fff;
 
+@mixin google {
+  margin: 16px 0 0;
+  background: $white;
+  border: #979797 solid 1px;
+  color: #333;
+}
+
+@mixin facebook {
+  background: #385185;
+  color: $white;
+}
+
 body {
   position: relative;
   min-height: 100%;
