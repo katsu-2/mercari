@@ -1,0 +1,257 @@
+.main-wrap {
+  background-color: #f5f5f5;
+  padding-top: 40px;
+}
+
+
+.main-container {
+  margin: 0 auto ;
+  width: 90%;
+  padding: 0 0 40px;
+  background-color: #f5f5f5
+}
+
+
+.main-contents {
+  float: right;
+  width: 70%;
+  height: auto;
+}
+
+
+.mypage-user-icon {
+  position: relative;
+  height: 200px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+
+  & a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #333;
+  }
+
+  & a figure {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  & a figure img {
+    vertical-align: middle;
+  }
+
+  & a h2 {
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+
+  &__bottom {
+    margin: 8px 0 0;
+    font-size: 0;
+
+    &__eval{
+      display: inline-block;
+      font-size: 14px;
+
+      & span{
+        margin: 0 0 0 8px;
+        font-size: 16px;
+      }
+    }
+
+    &__exhibit{
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 16px;
+
+      & span{
+        margin: 0 0 0 8px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+.mypage-tab-container-notification-todo {
+  height: auto;
+  background-color: blue;
+}
+
+
+.mypage-tabs {
+  border: 0;
+  background: #eee;
+  font-size: 0;
+
+  & li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  & li.active {
+    background: #fff;
+  }
+
+  & li h3 {
+    font-size: 22px;
+  }
+
+  & li h3 a {
+    position: relative;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    line-height: 72px;
+  }
+
+  & li.active h3 a {
+    border-top: 2px solid #ea352d;
+  }
+}
+
+
+.tab-contents .tab-pane.active {
+  display: block;
+}
+
+
+.mypage-item-list {
+
+  & li {
+    position: relative;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+  }
+}
+
+
+.mypage-item-list li.mypage-item-not-found {
+  border: 0;
+}
+
+
+.mypage-item-not-found {
+  padding: 160px 0 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
+
+
+.mypage-item-link {
+  display: block;
+  min-height: 48px;
+  padding: 16px;
+  color: #333;
+
+  & figure {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+  }
+
+  & img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+}
+
+
+.mypage-item-body {
+  margin: 0 40px 0 68px;
+}
+
+
+.mypage-item-text {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  max-height: 4.4em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+
+
+.mypage-item-link {
+
+  & time {
+    display: inline-block;
+    color: #888;
+  }
+
+  & time span {
+    vertical-align: middle;
+  }
+
+  & .icon-time {
+    margin: 0 8px 0 0;
+  }
+
+  & .icon-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+}
+
+
+.mypage-go-list {
+  padding: 16px;
+
+  & a {
+    display: block;
+    height: 56px;
+    margin: 0 auto;
+    background: #eee;
+    color: #333;
+    line-height: 56px;
+    text-align: center;
+  }
+}
+
+
+.mypage-tab-container {
+  margin: 40px 0 0;
+  background: #fff;
+}
+
+
+.mypage-tab-head {
+  padding: 0 4%;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 72px;
+  padding: 0 16px;
+}
+
+
+.tab-content .tab-pane.active {
+  display: block;
+}
+
+
+
+
