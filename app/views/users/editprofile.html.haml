@@ -1,0 +1,38 @@
+/ ヘッダー
+= render partial: "shared/header"
+
+/ ヘッダーここまでko
+/ パンくずリスト
+%nav.bread-crumb
+  %ul
+    %li.item-scope
+      = link_to "メルカリ", items_path
+      %i.fa.fa-chevron-right
+    %li.item-scope
+      = link_to "マイページ", items_path
+/ パンくずリスト
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+= render partial: "shared/mypage-side"
+
+
+
+/ = render partial: "shared/footer"
+
+
+
+
