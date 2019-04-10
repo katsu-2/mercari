@@ -1,5 +1,62 @@
+$gray: #f5f5f5;
+$black: #333;
+$white: #fff;
+
+@mixin google {
+  margin: 16px 0 0;
+  background: $white;
+  border: #979797 solid 1px;
+  color: $black;
+}
+
+@mixin facebook {
+  background: #385185;
+  color: $white;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  background: $gray;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: $black;
+  line-height: 1;
+}
+
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
+}
+
+.btn-sns {
+  position: relative;
+  & i {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+}
+
+.btn-default {
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.input-default {
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: $white;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 100%;
 }

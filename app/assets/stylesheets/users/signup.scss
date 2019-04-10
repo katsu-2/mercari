@@ -1,0 +1,45 @@
+.single-main {
+  .l--single {
+    background: $white;
+
+    &--head {
+      padding: 24px 8px;
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .l--single--inner {
+      border-top: 1px solid $gray;
+      padding: 40px;
+
+      &__content {
+        max-width: 320px;
+        margin: 0 auto;
+
+        .btn-mail {
+          position: relative;
+          background: #eee;
+          color: #000;
+
+          .fa-icon-mail {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translate(0, -50%);
+            color: #ccc;
+            font-size: 16px;
+          }
+        }
+        .btn-sns-facebook {
+          margin: 16px 0 0;
+          @include facebook;
+        }
+
+        .btn-sns-google {
+          @include google;
+        }
+      }
+    }
+  }
+}
