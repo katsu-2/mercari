@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :users, only:[:show]
   resources :items, only:[:index]
   get 'users/:id/editprofile' => 'users#editprofile'
+  get 'users/editshipping' => 'users#editshipping'
 end
 

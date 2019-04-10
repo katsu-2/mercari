@@ -1,7 +1,7 @@
 / ヘッダー
 = render partial: "shared/header"
 
-/ ヘッダーここまでko
+/ ヘッダーここまで
 / パンくずリスト
 %nav.bread-crumb
   %ul
@@ -12,6 +12,21 @@
       = link_to "マイページ", items_path
 / パンくずリスト
 
+.main-wrap
+  %main.main-container.clearfix
+    .l-content
+      .l-chapter-container
+      %h2.l-chapter-head プロフィール
+      %form{action: "", method: "POST"}
+        %input{name: "__csrf_value", type:"hidden", value: "7e18c5733712a429e4aaea63bffd0ced18f48708492da62b49e594c00da904072d2820e3bf828aac121f0eeefdfb90ea3fa62ad826a8c6257ee2ae474181c2411"}
+        .setting-profile-icon
+          %figure
+          %img{height: "60", src: "//static.mercdn.net/thumb/members/333477488.jpg?1507527211", width: "60"}/
+          %input.input-default2{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "IAM"}/
+        .setting-profile-content
+          %textarea.textarea-default{name: "introduction", placeholder: "例）質問気軽にどうぞ♪"}
+          %input{name: "after_save_callback", type: "hidden", value: "https://www.mercari.com/jp/mypage/profile/"}/
+          %button.btn-default.btn-red{type: "submit"} 変更する
 
 
 
@@ -26,12 +41,10 @@
 
 
 
-
-= render partial: "shared/mypage-side"
-
+    = render partial: "shared/mypage-side"
 
 
-/ = render partial: "shared/footer"
+= render partial: "shared/footer"
 
 
 
