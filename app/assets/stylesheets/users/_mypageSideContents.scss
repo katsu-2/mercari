@@ -6,7 +6,7 @@
 
 .mypage-nav__list{
 
-  & li {
+  li {
     border-top: 1px solid #eee;
   }
 
@@ -19,7 +19,7 @@
     color: #333;
 
 
-    & i {
+    i {
       position: absolute;
       top: 50%;
       right: 16px;
@@ -35,7 +35,7 @@
       text-decoration: none;
       opacity: 1;
 
-      & i {
+      i {
         -webkit-transform: translate(4px, -50%);
         transform: translate(4px, -50%);
         color: #333;

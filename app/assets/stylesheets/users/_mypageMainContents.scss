@@ -26,7 +26,7 @@
   background-color: white;
   text-align: center;
 
-  & a {
+  a {
     display: block;
     position: absolute;
     top: 50%;
@@ -37,7 +37,7 @@
     color: #333;
   }
 
-  & a figure {
+  a figure {
     overflow: hidden;
     width: 60px;
     height: 60px;
@@ -45,11 +45,11 @@
     border-radius: 50%;
   }
 
-  & a figure img {
+  a figure img {
     vertical-align: middle;
   }
 
-  & a h2 {
+  a h2 {
     margin: 8px 0 0;
     font-size: 14px;
   }
@@ -62,7 +62,7 @@
       display: inline-block;
       font-size: 14px;
 
-      & span{
+      span{
         margin: 0 0 0 8px;
         font-size: 16px;
       }
@@ -73,7 +73,7 @@
       font-size: 14px;
       margin-left: 16px;
 
-      & span{
+      span{
         margin: 0 0 0 8px;
         font-size: 16px;
       }
@@ -93,22 +93,22 @@
   background: #eee;
   font-size: 0;
 
-  & li {
+  li {
     display: inline-block;
     text-align: center;
     vertical-align: top;
     width: 50%;
   }
 
-  & li.active {
+  li.active {
     background: #fff;
   }
 
-  & li h3 {
+  li h3 {
     font-size: 22px;
   }
 
-  & li h3 a {
+  li h3 a {
     position: relative;
     display: block;
     color: #333;
@@ -116,7 +116,7 @@
     line-height: 72px;
   }
 
-  & li.active h3 a {
+  li.active h3 a {
     border-top: 2px solid #ea352d;
   }
 }
@@ -129,7 +129,7 @@
 
 .mypage-item-list {
 
-  & li {
+  li {
     position: relative;
     border-bottom: 1px solid #eee;
     background-color: white;
@@ -156,7 +156,7 @@
   padding: 16px;
   color: #333;
 
-  & figure {
+  figure {
     position: relative;
     overflow: hidden;
     float: left;
@@ -164,7 +164,7 @@
     height: 48px;
   }
 
-  & img {
+  img {
     position: absolute;
     top: 0;
     right: 0;
@@ -195,20 +195,20 @@
 
 .mypage-item-link {
 
-  & time {
+  time {
     display: inline-block;
     color: #888;
   }
 
-  & time span {
+  time span {
     vertical-align: middle;
   }
 
-  & .icon-time {
+  .icon-time {
     margin: 0 8px 0 0;
   }
 
-  & .icon-arrow-right {
+  .icon-arrow-right {
     position: absolute;
     top: 50%;
     right: 16px;
@@ -221,7 +221,7 @@
 .mypage-go-list {
   padding: 16px;
 
-  & a {
+  a {
     display: block;
     height: 56px;
     margin: 0 auto;
