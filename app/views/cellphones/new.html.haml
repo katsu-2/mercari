@@ -1,0 +1,12 @@
+%main.single-main
+  %section.l--single
+    %h2.l--single--head 電話番号の確認
+    .l--single--inner
+      .form-group
+        %label{for: "phone_number"}携帯電話の番号
+        %input{type: "text", placeholder: "携帯電話の番号を入力", class: "input-default"}
+      %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+      %button.btn-default.btn-red SMSを送信する
+      %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+      .form-group.text-right
+        = link_to "電話番号の確認が必要な理由", '#'
