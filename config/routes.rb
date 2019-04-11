@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users
   resources :items, only:[:index]
   resources :sessions, only: [:new, :create]
+  resources :signups, only: [:new, :create]
   resources :registrations, only: [:new, :create]
 
 
