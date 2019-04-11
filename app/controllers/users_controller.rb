@@ -1,12 +1,8 @@
 class UsersController < ApplicationController
 
 
-  
-  def show
-  end
-
-  def editprofile
-  end
+def show
+end
 
 
 end
