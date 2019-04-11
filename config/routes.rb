@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   devise_for :users
   devise_scope :user do
 
@@ -9,5 +11,6 @@ Rails.application.routes.draw do
   root "items#index"
   resources :users, only:[:show]
   resources :items, only:[:index, :show]
-
+  get 'users/:id/editprofile' => 'users#editprofile'
 end
+
