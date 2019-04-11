@@ -1,0 +1,75 @@
+.single-main {
+  .l--single {
+    .l--single--inner {
+      max-width: 320px;
+      margin: 0 auto;
+
+      .form-group:first-child {
+        margin: 0;
+      }
+
+      .form-group {
+        .l-chapter-sub-head {
+          font-size: 16px;
+        }
+
+        .l--single__text {
+          margin: 8px 0 0;
+          padding: 0;
+        }
+
+        .birthday-select-wrap {
+          display: block;
+          margin: 8px 0 0;
+
+          .select-wrap {
+            width: 200px;
+            display: inline-block;
+
+            .select-default {
+              width: 100%;
+            }
+            .icon-arrow-bottom {
+
+            }
+          }
+          span {
+            margin: 0 8px;
+          }
+        }
+      }
+      .form-info-text {
+        margin: 8px 0 0;
+        line-height: 1.5;
+        color: #888;
+      }
+    }
+    .l--single--inner {
+      .form-group {
+        .l--single--text {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+      }
+      .btn-red {
+        margin: 40px 0 0;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: $white;
+      }
+      .text--right {
+        text-align: right;
+
+        & p {
+          line-height: 1.5;
+
+          a {
+            color: #0099e8;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

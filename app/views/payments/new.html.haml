@@ -1,0 +1,40 @@
+%main.single-main
+  %section.l--single
+    %h2.l--single--head 支払い方法
+    .l--single--inner
+      .form-group
+        %label{for: "nickname"} カード番号
+        %span.form-require 必須
+        %input{type: "text", name: "nickname", placeholder: "半角数字のみ", class: "input-default"}
+        %ul.signup-card-list
+          %li
+            = image_tag('visa.png', width: 49, height: 20)
+          %li
+            = image_tag('master.png', width: 34, height: 20)
+          %li
+            = image_tag('saison.png', width: 30, height: 20)
+          %li
+            = image_tag('jcb.png', width: 32, height: 20)
+          %li
+            = image_tag('diners.png', width: 32, height: 20)
+          %li
+            = image_tag('discover.png', width: 32, height: 20)
+      .form-group.signup-form-expire
+        %label{for: "payment_card_expire"} 有効期限
+        %span.form-require 必須
+        %br/
+        .select-wrap
+          %select#payment_card_expire_mm.select-default
+          %span 月
+        .select-wrap
+          %select#payment_card_expire_yy.select-default
+          %span 年
+
+      .form-group
+        %label{for: "email"} セキュリティコード
+        %span.form-require 必須
+        %input{type: "email", name: "email", placeholder: "カード背面4桁もしくは3桁の番号", class: "input-default"}
+
+      %button.btn-default.btn-red 追加する
+
+
