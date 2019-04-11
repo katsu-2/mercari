@@ -1,0 +1,127 @@
+/ ヘッダー
+= render partial: "shared/header"
+
+/ ヘッダーここまで
+
+/ パンくずリスト
+%nav.bread-crumb
+  %ul
+    %li.item-scope
+      = link_to "メルカリ", items_path
+      %i.fa.fa-chevron-right
+    %li.item-scope
+      = link_to "マイページ", items_path
+/ パンくずリスト
+
+
+
+
+
+/ メインコンテンツ
+.main-wrap
+  %main.main-container.clearfix
+    / メインコンテンツ メイン
+    .main-contents
+      %section.mypage-user-icon
+        = link_to items_path do
+          %figure
+            = image_tag "users/avatar.jpg", width: "60", height: "60"
+          %h2 ユーザネーム
+          .mypage-user-icon__bottom
+            .mypage-user-icon__bottom__eval
+              評価
+              %span 10
+            .mypage-user-icon__bottom__exhibit
+              出品数
+              %span 50
+      %section.mypage-tab-container-notification-todo
+        %ul.mypage-tabs
+          %li.active
+            %h3
+              = link_to items_path do
+                お知らせ
+                %span
+          %li
+            %h3
+              = link_to items_path do
+                やることリスト
+                %span
+        .tab-contents
+          %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
+            %li
+              = link_to items_path, class: "mypage-item-link" do
+                %figure
+                  = image_tag "users/mercari_profile.png"
+                .mypage-item-body
+                  .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                  %time
+                    %i.far.fa-clock.icon-time
+                    %span 2 時間前
+                %i.fa.fa-chevron-right.icon-arrow-right
+            %li
+              = link_to items_path, class: "mypage-item-link" do
+                %figure
+                  = image_tag "users/mercari_profile.png"
+                .mypage-item-body
+                  .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                  %time
+                    %i.far.fa-clock.icon-time
+                    %span 2 時間前
+                %i.fa.fa-chevron-right.icon-arrow-right
+            %li
+              = link_to items_path, class: "mypage-item-link" do
+                %figure
+                  = image_tag "users/mercari_profile.png"
+                .mypage-item-body
+                  .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                  %time
+                    %i.far.fa-clock.icon-time
+                    %span 2 時間前
+                %i.fa.fa-chevron-right.icon-arrow-right
+            %li
+              = link_to items_path, class: "mypage-item-link" do
+                %figure
+                  = image_tag "users/mercari_profile.png"
+                .mypage-item-body
+                  .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                  %time
+                    %i.far.fa-clock.icon-time
+                    %span 2 時間前
+                %i.fa.fa-chevron-right.icon-arrow-right
+            %li
+              = link_to items_path, class: "mypage-item-link" do
+                %figure
+                  = image_tag "users/mercari_profile.png"
+                .mypage-item-body
+                  .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                  %time
+                    %i.far.fa-clock.icon-time
+                    %span 2 時間前
+                %i.fa.fa-chevron-right.icon-arrow-right
+            %li.mypage-go-list
+              = link_to "一覧を見る", items_path
+      %section.mypage-tab-container
+        %h2.mypage-tab-head 購入した商品
+        %ul.mypage-tabs
+          %li.active
+            %h3
+              = link_to items_path do
+                取引中
+                %span
+          %li
+            %h3
+              = link_to items_path do
+                過去の取引
+                %span
+        .tab-content
+          %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+            %li.mypage-item-not-found 取引中の商品はありません
+    / メインコンテンツ メイン ここまで
+
+
+    / メインコンテンツ サイド
+    = render partial: "shared/mypage-side"
+    / メインコンテンツ サイドここまで
+/ メインコンテンツここまで
+
+= render partial: "shared/footer"
