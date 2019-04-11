@@ -7,6 +7,11 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "items#index"
+
+  resources :users, only:[:show,] do
+   resource :profiles, only:[:show]
+   end
+
   resource :users, only:[:show] do
     resource :profiles, only:[:show]
     resource :registrations, only: [:new, :create]
@@ -15,7 +20,11 @@ Rails.application.routes.draw do
     resource :payments, only: [:new, :create]
   end
 
+
   resources :items, only:[:index]
+
+get "logout" => 'logouts#destory'
+
 
 
 end
