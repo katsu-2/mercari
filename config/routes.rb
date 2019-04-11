@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "items#index"
-  resources :users, only:[:show]
+  resources :users, only:[:show] do
+   resource :profiles, only:[:show]
+   end
   resources :items, only:[:index]
-  get 'users/:id/editprofile' => 'users#editprofile'
-  get 'users/editshipping' => 'users#editshipping'
+
 end
 
