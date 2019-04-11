@@ -11,7 +11,7 @@
       %button#google-login.btn-default.btn-sns.btn-sns-google
         = fa_icon "google", class: "btn-sns-google__icon"
         Googleでログイン
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f|
       .login__form--inner
         .login__form--inner__group
           = f.email_field :email, autofocus: true, autocomplete: "email", class: "login-input-text input-default"
