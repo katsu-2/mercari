@@ -1,0 +1,318 @@
+/ ヘッダー
+%header
+  #header-innner
+    .clearfix
+      #header-logo
+        = link_to items_path do
+          = image_tag "/logo.png"
+      %form#header-search-form
+        %input{name: "search", placeholder: "    何かお探しですか?", type: "search"}/
+        %i.fa.fa-search
+    #header-nav-box.clearfix
+      %nav#header-nav
+        %ul#header-nav__list
+          %li
+            %h2
+              = link_to items_path do
+                %i.fa.fa-list
+                %span カテゴリーから探す
+          %li
+            %h2
+              = link_to items_path do
+                %i.fa.fa-shopping-bag
+                %span ブランドから探す
+      #header-login
+        %ul#header-login__nav
+          %li
+            = link_to "ログイン", items_path, class: "header-login-btn"
+          %li
+            = link_to "新規登録", items_path, class: "header-signup-btn"
+/ ヘッダーここまで
+
+/ パンくずリスト
+%nav.bread-crumb
+  %ul
+    %li.item-scope
+      = link_to "メルカリ", items_path
+      %i.fa.fa-chevron-right
+    %li.item-scope
+      = link_to "マイページ", items_path
+/ パンくずリスト
+
+
+/ 商品詳細セクション
+.item-box-wrap
+  / 商品詳細部分
+  %section.item-box-container
+    %h1.item-name トップス シップス ブラウス ネイビー
+    .item-main-content.clearfix
+      .item-photo
+        .item-photo__stage
+          .item-photo__stage__item
+            .item-photo__stage__item__inner
+              = image_tag "users/item-photo1.jpg"
+        .item-photo__dots
+          .item-photo__dots__dot
+            .item-photo__dots__dot__inner
+              = image_tag "users/item-photo1.jpg"
+          .item-photo__dots__dot
+            .item-photo__dots__dot__inner
+              = image_tag "users/item-photo2.jpg"
+          .item-photo__dots__dot
+            .item-photo__dots__dot__inner
+              = image_tag "users/item-photo3.jpg"
+          .item-photo__dots__dot
+            .item-photo__dots__dot__inner
+              = image_tag "users/item-photo4.jpg"
+          .item-photo__dots__dot
+            .item-photo__dots__dot__inner
+              = image_tag "users/item-photo5.jpg"
+      %table.item-detail-table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              = link_to items_path do
+                congo  引っ越し売り切りスパート！
+              %div
+                .item-user-ratings
+                  %i.fa.fa-smile-wink
+                  %span 15
+                .item-user-ratings
+                  %i.fa.fa-meh
+                  %span 0
+                .item-user-ratings
+                  %i.fa.fa-sad-tear
+                  %span 0
+          %tr
+            %th カテゴリー
+            %td
+              = link_to items_path do
+                %div レディース
+              = link_to items_path do
+                .item-detail-table-sub-category
+                  %i.fa.fa-chevron-right
+                  トップス
+              = link_to items_path do
+                .item-detail-table-sub-category
+                  %i.fa.fa-chevron-right
+                  Tシャツ/カットソー(七分/長袖)
+          %tr
+            %th ブランド
+            %td
+              = link_to items_path do
+                %div シップス
+          %tr
+            %th 商品のサイズ
+            %td S
+          %tr
+            %th 商品のサイズ
+            %td S
+          %tr
+            %th 商品の状態
+            %td 目立った傷や汚れなし
+          %tr
+            %th 配送料の負担
+            %td 送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td 未定
+          %tr
+            %th 配送元地域
+            %td 静岡県
+          %tr
+            %th 発送日の目安
+            %td 4~7日で発送
+    .item-price-box
+      %span.item-price.bold ¥ 1,800
+      %span.item-tax (税込)
+      %span.item-shipping-fee 送料込み
+    = link_to items_path, class: "item-buy-btn" do
+      購入画面へ進む
+    .item-description
+      %p.item-description__inner
+        SHIPS  サイズ36 素材の違う2枚の生地を重ねてあり、デザイン性のあるブラウスです。 袖部分はメッシュ素材の1枚だけですので、涼しく着られます。色がネイビー1色ですので、どんなコーデにも合わせられます。中古品である事をご理解いただける方、宜しくお願い致します。
+    .item-button-container.clearfix
+      .item-button-left
+        %button.item-button
+          %i.fa.fa-heart
+          %span いいね!
+          %span.fade-in-down{"data-num" => "like"} 0
+        %button.item-button.item-button-report.clearfix
+          %i.fa.fa-flag
+          %span 不適切な商品の報告
+      .item-button-right
+        = link_to items_path do
+          %i.fa.fa-lock
+          %span あんしん・あんぜんへの取り組み
+  / 商品詳細部分 ここまで
+  / 商品コメント部分
+  .item-detail-message
+    .message-container
+      / 各ユーザのコメント部分 ここまで
+      .message-content
+        %ul.message-items
+          %li.clearfix
+            = link_to items_path, class: "message-user" do
+              %figure
+                %div
+                  = image_tag "users/avatar.jpg"
+                %figcaption.bold ユーザネーム
+            .message-body
+              .message-body-text
+                初めまして
+                %br/
+                着丈、身幅教えて頂けますか？
+                %br/
+                又、どのくらい着用されましたか？
+                %br/
+                差し支えなければ教えて下さい。
+              .clearfix.message-icons
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 19 時間前
+                .message-icon-right
+                  %form
+                    %button{:type => "submit"}
+                      %i.fa.fa-flag
+          %li.clearfix
+            = link_to items_path, class: "message-user" do
+              %figure
+                %div
+                  = image_tag "users/avatar.jpg"
+                %figcaption.bold ユーザネーム
+            .message-body
+              .message-body-text
+                初めまして
+                %br/
+                着丈、身幅教えて頂けますか？
+                %br/
+                又、どのくらい着用されましたか？
+                %br/
+                差し支えなければ教えて下さい。
+              .clearfix.message-icons
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 19 時間前
+                .message-icon-right
+                  %form
+                    %button{type: "submit"}
+                      %i.fa.fa-flag
+          %li.clearfix
+            = link_to items_path, class: "message-user" do
+              %figure
+                %div
+                  = image_tag "users/avatar.jpg"
+                %figcaption.bold ユーザネーム
+            .message-body
+              .message-body-text
+                初めまして
+                %br/
+                着丈、身幅教えて頂けますか？
+                %br/
+                又、どのくらい着用されましたか？
+                %br/
+                差し支えなければ教えて下さい。
+              .clearfix.message-icons
+                %time.message-icon-left
+                  %i.far.fa-clock
+                  %span 19 時間前
+                .message-icon-right
+                  %form
+                    %button{type: "submit"}
+                      %i.fa.fa-flag
+      / 各ユーザのコメント部分 ここまで
+      / コメントフォーム
+      .message-content
+        %form.message-form
+          %p
+            相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %textarea.textarea-default{name: "body", type: "text", value: ""}
+          %button.message-submit.btn-default{type: "submit"}
+            %span コメントする
+      / コメントフォーム ここまで
+  / 商品コメント部分 ここまで
+/ 商品詳細セクション
+
+
+
+
+/ 補足情報
+%aside.app-banner
+  .app-banner__mobile
+    = link_to items_path do
+      %figure.app-banner__icon
+        = image_tag "/mercari_icon.png", width: "50"
+      .app-banner__text
+        スマホかんたんフリマアプリ
+        %span 今すぐ無料ダウンロード!
+/ 補足情報 ここまで
+/ フッター
+%footer#footer-wrap
+  %nav#footer-nav.clearfix
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+    .footer-cell
+      %h2.footer-head メルカリについて
+      %ul
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+        %li
+          = link_to "会社概要(運営会社)", items_path
+  .footer-bottom
+    = link_to items_path do
+      = image_tag "/footer-logo.png", height: "33", width: "124"
+    %span.copy-right
+      %small ©︎ 2019 Mercari
+/ フッター ここまで
+/ 出品ボタン
+= link_to items_path, class: "exhibit-btn" do
+  %div 出品
+  %i.fa.fa-camera
+/ 出品ボタン ここまで
