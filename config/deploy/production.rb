@@ -1,5 +1,4 @@
 server '18.179.213.108', user: 'ec2-user', roles: %w{app db web}
-config.require_master_key = true
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
