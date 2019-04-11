@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   root "items#index"
   resources :users
   resources :items, only:[:index]
+  resources :sessions, only: [:new, :create]
+  resources :registrations, only: [:new, :create]
+
 
 end
