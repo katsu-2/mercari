@@ -5,9 +5,8 @@ Rails.application.routes.draw do
   root "items#index"
   resources :users
   resources :items, only:[:index]
-  resources :signups, only: [:new, :create]
   resources :registrations, only: [:new, :create]
   resources :cellphones, only: [:new, :create]
-
+  resources :addresses, only: [:new, :create]
 
 end
