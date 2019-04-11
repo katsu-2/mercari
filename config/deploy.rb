@@ -60,9 +60,38 @@ server "18.179.213.108", user: "ec2-user", roles: %w{app db web}
 set :rails_env, "production"
 set :unicorn_rack_env, "production"
 
+set :default_env, {
+  rbenv_root: "/usr/local/rbenv",
+  path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
+  AWS_ACCESS_KEY_ID_MERCARI: ENV["AWS_ACCESS_KEY_ID_MERCARI"],
+  AWS_SECRET_ACCESS_KEY_MERCARI: ENV["AWS_SECRET_ACCESS_KEY_MERCARI"],
+  BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
+  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
+}
+
+set :linked_files, %w{ config/credentials.yml.enc }
+set :linked_files, %w{ config/master.key }
+
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+
+  desc 'upload credentials.yml.enc'
+  desc 'upload master.key'
+
+  task :upload do
+    on roles(:app) do |host|
+      if test "[ ! -d #{shared_path}/config ]"
+        execute "mkdir -p #{shared_path}/config"
+      end
+      upload!('config/credentials.yml.enc', "#{shared_path}/config/credentials.yml.enc")
+      upload!('config/master.key', "#{shared_path}/config/master.key")
+    end
+  end
+  before :starting, 'deploy:upload'
+  after :finishing, 'deploy:cleanup'
 end
+
+
