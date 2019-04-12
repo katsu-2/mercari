@@ -1,5 +1,28 @@
+.user {
+  font-weight: 600;
+  color: $red;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  .user-circle {
+    background: $red;
+  }
+
+  .user-bar {
+    width: 100px;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    left: 20px;
+    bottom: 4px;
+  }
+}
+
 .single-main {
   .l--single {
+    width: 700px;
+    margin: 0 auto;
     .l--single--inner {
       max-width: 320px;
       margin: 0 auto;
