@@ -56,6 +56,10 @@ main {
 
       &__group {
         margin: 24px 0 0;
+
+        .login-input-text {
+          width: 90%;
+        }
       }
       .actions {
         .login-submit {
