@@ -1,25 +1,24 @@
-.progress-bar {
-  padding: 16px 0;
-  border-top: 1px solid #eee;
-  text-align: center;
+.user {
+  font-weight: 600;
+  color: $red;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
 
-  ol {
-    margin: 0;
-    list-style: none;
-
-    .active {
-
-    }
-    li {
-      .progress-status {
-
-      }
-    }
+  .user-bar {
+    width: 100px;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    left: 20px;
+    bottom: 4px;
   }
 }
 
 .single-main {
   .l--single {
+    width: 700px;
+    margin: 0 auto;
     .l--single--inner {
       max-width: 320px;
       margin: 0 auto;

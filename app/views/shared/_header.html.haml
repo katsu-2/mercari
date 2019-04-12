@@ -1,21 +1,26 @@
-%header.single-header
+%header.single-header.header-top
   %h1
     = link_to '#' do
-      = image_tag("header.png", alt: "mercari")
+      = image_tag("header.png", class: "header-logo",alt: "mercari")
   %nav.progress-bar.signup-bar
     %ol.clearfix
-      %li.active
+      %li.user
         会員情報
-        .progress-status
-      %li
+        .progress-circle.user-circle
+        .user-bar
+      %li.phone
         電話番号認証
-        .progress-status
-      %li
+        .progress-circle.phone-circle
+        .phone-bar
+      %li.address
         お届け先住所入力
-        .progress-status
-      %li
+        .progress-circle.address-circle
+        .address-bar
+      %li.pay
         支払い方法
-        .progress-status
-      %li
+        .progress-circle.pay-circle
+        .pay-bar
+      %li.done
         完了
-        .progress-status
+        .progress-circle.done-circle
+        .done-bar
