@@ -39,9 +39,12 @@ main {
       }
       .btn-sns-google {
         @include google;
+        position: relative;
 
         &__icon {
           font-size: 26px;
+          position: absolute;
+          left: 0;
         }
       }
     }
@@ -56,6 +59,11 @@ main {
 
       &__group {
         margin: 24px 0 0;
+
+        .login-input-text {
+          width: 90%;
+          height: 30px;
+        }
       }
       .actions {
         .login-submit {

@@ -1,3 +1,23 @@
+.progress-bar {
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+
+  ol {
+    margin: 0;
+    list-style: none;
+
+    .active {
+
+    }
+    li {
+      .progress-status {
+
+      }
+    }
+  }
+}
+
 .single-main {
   .l--single {
     .l--single--inner {
