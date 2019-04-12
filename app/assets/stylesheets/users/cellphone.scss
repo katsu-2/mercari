@@ -1,3 +1,20 @@
+.phone {
+  font-weight: 600;
+  color: $red;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  .phone-bar {
+    width: 130px;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    left: 20px;
+    bottom: 4px;
+  }
+}
+
 .single-main {
   .l--single {
     background: $white;
