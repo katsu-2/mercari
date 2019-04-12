@@ -45,6 +45,31 @@
 
 }
 
+.inner-footer-cell:first-of-type {
+  padding: 0 10px 0 0;
+}
+
+.inner-footer-cell {
+  float: left;
+  padding-left: 10px;
+  vertical-align: top;
+  width: 40%;
+}
+
+.footer-social-link {
+  display: inline-block;
+
+  i {
+    background: transparent;
+    margin: 16px 18px 0 0;
+    font-size: 24px;
+  }
+}
+
+.footer-nav-lang {
+    width: auto;
+}
+
 .footer-bottom {
   width: 70%;
   margin: 30px auto 20px;
