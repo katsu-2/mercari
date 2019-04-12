@@ -1,19 +1,13 @@
 .header-top {
   display: flex;
-
-  h1 {
-    a {
-      .header-logo {
-        margin-left: 260px;
-        margin-right: 50px;
-      }
-    }
-  }
+  justify-content: center;
 
   .signup-bar {
+    justify-content: center;
     ol {
       width: 550px;
       margin-top: 30px;
+      margin-left: 50px;
 
       li {
         .progress-circle {
@@ -22,9 +16,6 @@
           background: #ccc;
           border-radius: 50%;
           margin: 8px auto 0;
-        }
-        .top-bar {
-
         }
       }
     }

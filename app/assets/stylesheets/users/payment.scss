@@ -1,3 +1,19 @@
+.pay {
+  font-weight: 600;
+  color: $red;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  .pay-bar {
+    width: 95px;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    left: 20px;
+    bottom: 4px;
+  }
+}
 .signup-card-list {
   margin: 8px 0 0;
   font-size: 0;

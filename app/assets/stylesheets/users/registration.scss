@@ -5,6 +5,10 @@
   z-index: 1;
   display: inline-block;
 
+  .user-circle {
+    background: $red;
+  }
+
   .user-bar {
     width: 100px;
     height: 2px;
