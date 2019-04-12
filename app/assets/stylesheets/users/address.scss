@@ -1,0 +1,16 @@
+.address {
+  font-weight: 600;
+  color: $red;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  .address-bar {
+    width: 140px;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    left: 20px;
+    bottom: 4px;
+  }
+}
