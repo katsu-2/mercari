@@ -11,14 +11,14 @@
 }
 
 .single-head {
-    padding: 32px 16px;
-    font-size: 22px;
-    line-height: 1.5;
-    text-align: center;
+  padding: 32px 16px;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .sell-form {
-    border-top: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 .sell-upload-box {
@@ -41,14 +41,14 @@
   width: 100%;
   margin-left: 0;
   position: relative;
-    min-height: 162px;
-    background: #f5f5f5;
-    border: 1px dashed #ccc;
-    font-size: 0;
-    text-align: center;
-    cursor: pointer;
+  min-height: 162px;
+  background: #f5f5f5;
+  border: 1px dashed #ccc;
+  font-size: 0;
+  text-align: center;
+  cursor: pointer;
 
-    pre {
+  pre {
     position: absolute;
     top: 50%;
     left: 16px;
@@ -75,12 +75,12 @@
 }
 
 .sell-content {
-    padding: 40px;
-    border-top: 1px solid #eee;
+  padding: 40px;
+  border-top: 1px solid #eee;
 }
 
 .form-group:first-child {
-    margin: 0;
+  margin: 0;
 }
 
 .form-group {
@@ -91,36 +91,36 @@
 }
 
 .sell-content {
-    padding: 40px;
-    border-top: 1px solid #eee;
+  padding: 40px;
+  border-top: 1px solid #eee;
 }
 
 .sell-sub-head {
-    float: left;
-    color: #888;
-    font-size: 14px;
+  float: left;
+  color: #888;
+  font-size: 14px;
 }
 
 .sell-form-box {
-    float: right;
-    width: 400px;
-    margin: 0;
+  float: right;
+  width: 400px;
+  margin: 0;
 }
 
 .select-wrap {
-    margin: 8px 0 0;
-    position: relative;
-    background: #fff;
-    i {
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      z-index: 2;
-      color: #888;
-      font-size: 28px;
-      -webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
-    }
+  margin: 8px 0 0;
+  position: relative;
+  background: #fff;
+  i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 28px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
 }
 
 
@@ -167,8 +167,8 @@
 
 
 .sell-content {
-    padding: 40px;
-    border-top: 1px solid #eee;
+  padding: 40px;
+  border-top: 1px solid #eee;
 }
 
 .sell-btn-box {
