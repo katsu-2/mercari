@@ -23,9 +23,7 @@
           %br/
           登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
           %p.text-right
-            %a{href: "/jp/help_center/article/495/", target: "_blank"}
-              本人確認書類のアップロードについて
-            %i.icon-arrow-right
+            = link_to '本人確認書類のアップロードについて', "/jp/help_center/article/495/"
         .form-group
           %label お名前
           %p current_user.name
@@ -108,9 +106,7 @@
         %button.btn-default.btn-red{type: "submit"} 登録する
         .form-group.text-right
           %p
-            %a{href: "/jp/help_center/article/423/", target: "_blank"}
-              本人情報の登録について
-              %i.icon-arrow-right
+            = link_to "本人情報の登録について", "/jp/help_center/article/423/"
         %input{name: "__csrf_value", type: "hidden", value: "c8cd482d66386302a945cbf94de1dbb82ce4c14bafb864b43fd1dd917ed9774fac6a89a49fbdda8742d22f43a0bc1a94fe4212d5b41d816d7a754f02c23ea5077"}/
 
 
