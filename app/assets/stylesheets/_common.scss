@@ -2,6 +2,7 @@ $gray: #f5f5f5;
 $black: #333;
 $white: #fff;
 $red: #ea352d;
+$hardgray: #ccc;
 
 @mixin google {
   margin: 16px 0 0;
@@ -66,7 +67,7 @@ body {
   margin: 0 0 0 8px;
   padding: 2px 4px;
   border-radius: 2px;
-  color: #fff;
+  color: $white;
   font-size: 12px;
   vertical-align: top;
 }
@@ -75,8 +76,8 @@ body {
   height: 48px;
   padding: 10px 16px 8px;
   border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
+  border: 1px solid $hardgray;
+  background: $white;
   line-height: 1.5;
   font-size: 16px;
 }
@@ -87,7 +88,7 @@ body {
   height: 48px;
   padding: 0 16px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid $hardgray;
   background: 0;
   font-size: 16px;
   line-height: 1.5;
@@ -127,8 +128,17 @@ body {
 
 .form-group {
   margin: 40px 0 0;
-  width: 90%;
+  width: 100%;
 
+.form-arbitrary{
+  background: $hardgray;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: $white;
+  font-size: 12px;
+  vertical-align: top;
+}
 
   label {
     font-weight: 600;
@@ -142,12 +152,17 @@ body {
     height: 48px;
     padding: 10px 16px 8px;
     border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #fff;
+    border: 1px solid $hardgray;
+    background: $white;
     line-height: 1.5;
     font-size: 16px;
   }
 
+
+a {
+    color: #0099e8;
+    text-decoration: none;
+}
   .progress-bar li {
     position: relative;
     z-index: 1;
@@ -157,3 +172,4 @@ body {
     font-size: 12px;
     color: #888;
   }
+
