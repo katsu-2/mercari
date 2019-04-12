@@ -5,17 +5,12 @@ Rails.application.routes.draw do
   }
 
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "items#index"
 
-  resources :users, only:[:show]
+
   resources :items, only:[:index, :show, :new]
   get 'users/:id/editprofile' => 'users#editprofile'
 
-
-  resources :users, only:[:show,] do
-   resource :profiles, only:[:show]
-   end
 
   resource :users, only:[:show] do
     resource :profiles, only:[:show]
@@ -23,13 +18,10 @@ Rails.application.routes.draw do
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
     resource :payments, only: [:new, :create]
+    resource :identityinformations, only: [:show]
   end
 
-
-  resources :items, only:[:index]
-
-get "logout" => 'logouts#destory'
-
+  get "logout" => 'logouts#destory'
 
 end
 

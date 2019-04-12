@@ -126,8 +126,17 @@ body {
 
 .form-group {
   margin: 40px 0 0;
-  width: 90%;
+  width: 100%;
 
+.form-arbitrary{
+  background: #ccc;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
 
   label {
     font-weight: 600;
@@ -146,3 +155,8 @@ body {
     line-height: 1.5;
     font-size: 16px;
   }
+
+a {
+    color: #0099e8;
+    text-decoration: none;
+}
