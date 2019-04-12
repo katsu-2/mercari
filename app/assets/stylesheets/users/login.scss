@@ -39,9 +39,12 @@ main {
       }
       .btn-sns-google {
         @include google;
+        position: relative;
 
         &__icon {
           font-size: 26px;
+          position: absolute;
+          left: 0;
         }
       }
     }
