@@ -4,6 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many    :items
+  has_many    :profits
+  has_many    :likes
+  has_many    :comments
+  belongs_to  :cart
+
 
   validates :email, presence: true, uniqueness: true
 end
