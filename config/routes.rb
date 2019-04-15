@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   root "items#index"
 
 
-  resources :items, only:[:index, :show, :new]
+  resources :items, only:[:index, :show, :new] do
+    resource :confirmation, only:[:show]
   get 'users/:id/editprofile' => 'users#editprofile'
+end
 
 
   resource :users, only:[:show] do
