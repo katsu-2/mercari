@@ -130,15 +130,15 @@ body {
   margin: 40px 0 0;
   width: 100%;
 
-.form-arbitrary{
-  background: $hardgray;
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
-  border-radius: 2px;
-  color: $white;
-  font-size: 12px;
-  vertical-align: top;
-}
+  .form-arbitrary{
+    background: $hardgray;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: $white;
+    font-size: 12px;
+    vertical-align: top;
+  }
 
   label {
     font-weight: 600;
@@ -148,28 +148,32 @@ body {
   }
 }
 
-  .input-default {
-    height: 48px;
-    padding: 10px 16px 8px;
-    border-radius: 4px;
-    border: 1px solid $hardgray;
-    background: $white;
-    line-height: 1.5;
-    font-size: 16px;
-  }
+.input-default {
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid $hardgray;
+  background: $white;
+  line-height: 1.5;
+  font-size: 16px;
+}
 
 
 a {
-    color: #0099e8;
-    text-decoration: none;
+  color: #0099e8;
+  text-decoration: none;
 }
-  .progress-bar li {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    min-width: 40px;
-    margin: 0 5% 0 0;
-    font-size: 12px;
-    color: #888;
-  }
+.progress-bar li {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  min-width: 40px;
+  margin: 0 5% 0 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.bold {
+  font-weight: 600;
+}
 
