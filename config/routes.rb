@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
 
   resources :items, only:[:index, :show, :new] do
-    resource :confirmation, only:[:show]
+    resources :confirmation, only:[:show]
   get 'users/:id/editprofile' => 'users#editprofile'
 end
 
