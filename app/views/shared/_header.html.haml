@@ -23,6 +23,6 @@
       #header-login
         %ul#header-login__nav
           %li
-            = link_to "ログイン", items_path, class: "header-login-btn"
+            = link_to "ログイン", new_user_session_path, class: "header-login-btn"
           %li
-            = link_to "新規登録", items_path, class: "header-signup-btn"
+            = link_to "新規登録", new_user_registration_path, class: "header-signup-btn"
