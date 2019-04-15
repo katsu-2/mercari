@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_040141) do
+ActiveRecord::Schema.define(version: 2019_04_15_040406) do
 
   create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 2019_04_15_040141) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "profits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "profit"
+    t.string "profit_log"
+    t.datetime "expiration_date"
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_profits_on_item_id"
+    t.index ["user_id"], name: "index_profits_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -67,4 +79,6 @@ ActiveRecord::Schema.define(version: 2019_04_15_040141) do
   add_foreign_key "carts", "items"
   add_foreign_key "carts", "users"
   add_foreign_key "items", "users"
+  add_foreign_key "profits", "items"
+  add_foreign_key "profits", "users"
 end
