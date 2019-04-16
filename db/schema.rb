@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_041651) do
+ActiveRecord::Schema.define(version: 2019_04_16_085513) do
 
   create_table "brand_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "brand_id"
@@ -109,15 +109,9 @@ ActiveRecord::Schema.define(version: 2019_04_15_041651) do
     t.string "first_kana", null: false
     t.string "avatar"
     t.text "profile"
-    t.integer "phone_number"
     t.integer "birth_year"
     t.integer "birth_month"
     t.integer "birth_day"
-    t.integer "post_num", null: false
-    t.integer "prefecture", null: false
-    t.string "city", null: false
-    t.string "block_num", null: false
-    t.string "building_name"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
