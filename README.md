@@ -7,24 +7,60 @@
 |first_name|string|null: false|
 |family_kana|string|null: false|
 |first_kana|string|null: false|
-|phone_number|integer|unique: true|
 |avatar|string|
 |profile|text|
-|birth_year|integer|
-|birth_month|integer|
-|birth_day|integer|
-|post_num|integer|null: false|
-|prefecture|integer|null: false|
-|city|string|null: false|
-|block_num|string|null: false|
-|building_name|string|
+|birth_year|integer|null: false|
+|birth_month|integer|null: false|
+|birth_day|integer|null: false|
+|cellphone_id|references|foreign_key: true|
+|address_id|references|foreign_key: true|
+|payment_id|references|foreign_key: true|
+
 
 ### Association
 - has_many :items
-- has_many :profits
 - has_many :likes
 - has_many :comments
-- belongs_to :cart
+- has_many :carts
+- has_one  :cellphone
+- has_one  :address
+- has_one  :payment
+
+
+## Addressesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|fullname|string|null: false|
+|fullname_kana|string|null: false|
+|post_num|integer|null: false|
+|city|string|null: false|
+|block_num|string|null: false|
+|building_name|string|
+|prefecture_id|references|null: false|
+
+
+### Association
+- has_one :user
+
+
+## Cellphonesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|phone_num|string|null: false|
+
+
+### Association
+- has_one :user
+
+
+## Paymentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+
+
+### Association
+- has_one :user
+
 
 
 
@@ -34,27 +70,27 @@
 |name|string|null: false|
 |price|integer|null: false|
 |description|text|null: false|
-|size|string|null: false|
-|condition|string|null: false|
-|delivery_fee|string|null: false|
-|delivery_date|string|null: false|
-|delivery_way|string|null: false|
+|size|integer|null: false|
+|condition|integer|null: false|
+|delivery_fee|integer|null: false|
+|delivery_date|integer|null: false|
+|delivery_area|integer|null: false|
+|delivery_way|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
 |category_id|references|null: false, foreign_key: true|
-|brand_id|references|null: false, foreign_key: true|
-|comment_id|references|null: false, foreign_key: true|
+|brand_id|references|foreign_key: true|
 |image_id|references|null: false, foreign_key: true|
-|like_id|references|null: false, foreign_key: true|
+
 
 ###Association
 - has_many   :comments
-- has_many   :brands
 - has_many   :images
 - has_many   :profits
 - has_many   :likes
 - belongs_to :user
 - belongs_to :category
-- belongs_to :cart
+- belongs_to :brand
+- has_one    :cart
 
 
 
@@ -66,22 +102,7 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :item
-
-
-
-## Profitsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|profit|integer|
-|profit_log|string|
-|expiration_date|daytime|
-|user_id|references|null: false, foreign_key: true|
-|item_id|references|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :item
+- has_one    :item
 
 
 
@@ -115,10 +136,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |brand|string|
-|category_id|references|foreign_key: true|
 
 ### Association
-- belongs_to :item
+- has_many   :item
 - has_many   :brand_categories
 - has_many   :categories, through: :brand_categories
 
