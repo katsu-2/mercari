@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many    :profits
   has_many    :likes
   has_many    :comments
-  belongs_to  :cart
+  # belongs_to  :cart
 
 
   validates :email, presence: true, uniqueness: true
