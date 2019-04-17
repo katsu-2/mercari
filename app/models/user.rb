@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many    :comments
   # belongs_to  :cart
 
-  validates :nickname, presence: true, unique: true
+  validates :nickname, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :family_name, presence: true
   validates :first_name, presence: true
