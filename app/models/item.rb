@@ -31,5 +31,14 @@ class Item < ApplicationRecord
 
   # enum status: {published: 0, stopped: 1, trading: 2, sold: 3}
 
-
+  validates :name, length: { maximum: 40 }, presence: true
+  validates :description, length: { maximum: 1000 }, presence: true
+  validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }, presence: true
+  validates :condition, presence: true
+  validates :size, presence: true
+  validates :delivery_way, presence: true
+  validates :delivery_fee, presence: true
+  validates :delivery_date, presence: true
+  validates :delivery_area, presence: true
+  # validates :user_id, presence: true
 end
