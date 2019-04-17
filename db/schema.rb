@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_041651) do
+ActiveRecord::Schema.define(version: 2019_04_16_092843) do
 
   create_table "brand_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "brand_id"
@@ -67,14 +67,15 @@ ActiveRecord::Schema.define(version: 2019_04_15_041651) do
     t.string "name", null: false
     t.integer "price", null: false
     t.text "description", null: false
-    t.string "size", null: false
-    t.string "condition", null: false
-    t.string "delivery_fee", null: false
-    t.string "delivery_date", null: false
-    t.string "delivery_way", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "size"
+    t.string "condition"
+    t.integer "delivery_fee"
+    t.integer "delivery_date"
+    t.integer "delivery_way"
+    t.integer "delivery_area"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -109,15 +110,9 @@ ActiveRecord::Schema.define(version: 2019_04_15_041651) do
     t.string "first_kana", null: false
     t.string "avatar"
     t.text "profile"
-    t.integer "phone_number"
     t.integer "birth_year"
     t.integer "birth_month"
     t.integer "birth_day"
-    t.integer "post_num", null: false
-    t.integer "prefecture", null: false
-    t.string "city", null: false
-    t.string "block_num", null: false
-    t.string "building_name"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -129,7 +124,6 @@ ActiveRecord::Schema.define(version: 2019_04_15_041651) do
 
   add_foreign_key "brand_categories", "brands"
   add_foreign_key "brand_categories", "categories"
-  add_foreign_key "brands", "categories"
   add_foreign_key "carts", "items"
   add_foreign_key "carts", "users"
   add_foreign_key "comments", "items"
