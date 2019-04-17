@@ -17,8 +17,7 @@
       .l-content-container--back-white
         %form.l-single-inner{action: "https://www.mercari.com/jp/logout/", method: "POST", novalidate: "novalidate"}
           .l-single-content
-            = link_to "ログアウト",items_path, method: :delete, class: "header-logout-btn"
-            / destroy_user_session_path
+            = link_to "ログアウト",destroy_user_session_path, method: :delete, class: "header-logout-btn"
 
 
     = render partial: "shared/mypage-side"
