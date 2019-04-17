@@ -47,17 +47,18 @@
           %br/
           .birthday-select-wrap
             .select-wrap
-              %select.select-default{name: "year"}
+              = select_tag :bitrh_year, options_for_select(1900..2019), { class: "select-default" }
               = fa_icon 'chevron-down', class: "icon-arrow-bottom"
             %span 年
           .birthday-select-wrap
             .select-wrap.select-wrap__month
-              %select.select-default{name: "month"}
+              = select_tag :bitrh_month, options_for_select(1..12), { class: "select-default" }
               = fa_icon 'chevron-down', class: "icon-arrow-bottom"
+
             %span 月
           .birthday-select-wrap
             .select-wrap.select-wrap__day
-              %select.select-default{name: "day"}
+              = select_tag :bitrh_day, options_for_select(1..31), { class: "select-default" }
               = fa_icon 'chevron-down', class: "icon-arrow-bottom"
             %span 月
           .clearfix
