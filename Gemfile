@@ -47,6 +47,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -72,6 +74,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
+gem "jquery-rails"
 
 group :production do
   gem 'unicorn', '5.4.1'
