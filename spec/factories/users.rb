@@ -1,5 +1,4 @@
 FactoryBot.define do
-
   factory :user do
     nickname              { Faker::Internet.user_name(1..20)}
     email                 { Faker::Internet.email }
@@ -13,5 +12,4 @@ FactoryBot.define do
     created_at            { Faker::Time.between(DateTime.now - 1, DateTime.now)}
     updated_at            { Faker::Time.between(DateTime.now - 1, DateTime.now)}
   end
-
 end
