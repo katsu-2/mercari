@@ -41,5 +41,5 @@ class Item < ApplicationRecord
   validates :delivery_fee, presence: true
   validates :delivery_date, presence: true
   validates :delivery_area, presence: true
-  # validates :user_id, presence: true
+  validates :user_id, presence: true
 end
