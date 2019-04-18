@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'pry-rails'
   gem 'pry-doc'
+  gem 'faker'
 end
 
 group :development do
@@ -75,6 +76,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
 gem "jquery-rails"
+gem 'rails-i18n'
 
 group :production do
   gem 'unicorn', '5.4.1'
