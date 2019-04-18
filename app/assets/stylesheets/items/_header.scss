@@ -1,3 +1,4 @@
+@import 'common';
 header {
   width: 100%;
   height: auto;
@@ -99,6 +100,9 @@ header {
 
 #header-login__nav li {
   display: inline-block;
+  position: relative;
+  padding: 0 7px;
+  cursor: pointer;
 }
 
 .header-login-btn {
@@ -121,4 +125,21 @@ header {
     line-height: 30px;
     border-radius: 4px;
     text-align: center;
+}
+
+.header-announce-btn {
+  @include header_signed_in;
+}
+
+.header-todo-btn {
+  @include header_signed_in;
+}
+
+.header-mypage-btn {
+  @include header_signed_in;
+}
+
+.font {
+  font-size: 18px;
+  color: #cfcfcf;
 }
