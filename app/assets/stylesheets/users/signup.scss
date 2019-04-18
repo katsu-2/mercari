@@ -34,10 +34,20 @@
         .btn-sns-facebook {
           margin: 16px 0 0;
           @include facebook;
+
+          i {
+            font-size: 26px;
+          }
         }
 
         .btn-sns-google {
           @include google;
+          position: relative;
+
+          img {
+            position: absolute;
+            left: 0;
+          }
         }
       }
     }
