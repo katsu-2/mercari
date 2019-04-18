@@ -34,8 +34,10 @@ ActiveRecord::Schema.define(version: 2019_04_17_062631) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "brand"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_brands_on_category_id"
   end
 
   create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -130,6 +132,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_062631) do
     t.string "first_kana", null: false
     t.string "avatar"
     t.text "profile"
+    t.integer "phone_number"
     t.integer "birth_year"
     t.integer "birth_month"
     t.integer "birth_day"
@@ -144,6 +147,7 @@ ActiveRecord::Schema.define(version: 2019_04_17_062631) do
 
   add_foreign_key "brand_categories", "brands"
   add_foreign_key "brand_categories", "categories"
+  add_foreign_key "brands", "categories"
   add_foreign_key "carts", "items"
   add_foreign_key "carts", "users"
   add_foreign_key "comments", "items"

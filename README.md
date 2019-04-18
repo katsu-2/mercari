@@ -12,9 +12,6 @@
 |birth_year|integer|null: false|
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
-|cellphone_id|references|foreign_key: true|
-|address_id|references|foreign_key: true|
-|payment_id|references|foreign_key: true|
 
 
 ### Association
@@ -37,29 +34,33 @@
 |block_num|string|null: false|
 |building_name|string|
 |prefecture_id|references|null: false|
+|user_id|references|null: false|
 
 
 ### Association
-- has_one :user
+- belongs_to :user
 
 
 ## Cellphonesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |phone_num|string|null: false|
+|user_id|string|null: false|
 
 
 ### Association
-- has_one :user
+- belongs_to :user
 
 
-## Paymentsテーブル
+## Creditsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|user_id|string|null: false|
+
 
 
 ### Association
-- has_one :user
+- belongs_to :user
 
 
 
@@ -76,6 +77,7 @@
 |delivery_date|integer|null: false|
 |delivery_area|integer|null: false|
 |delivery_way|integer|null: false|
+|status|integer|null: false|
 |user_id|references|null: false, foreign_key: true|
 |category_id|references|null: false, foreign_key: true|
 |brand_id|references|foreign_key: true|
@@ -135,7 +137,7 @@
 ## Brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|brand|string|
+|name|string|
 
 ### Association
 - has_many   :item
