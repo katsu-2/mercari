@@ -22,7 +22,21 @@
                 %span ブランドから探す
       #header-login
         %ul#header-login__nav
-          %li
-            = link_to "ログイン", new_user_session_path, class: "header-login-btn"
-          %li
-            = link_to "新規登録",  new_users_registrations_path, class: "header-signup-btn"
+          - if user_signed_in?
+            %li
+              = link_to '#', class: "header-announce-btn" do
+                %i.fa.fa-bell.font
+                %span お知らせ
+            %li
+              = link_to '#', class: "header-todo-btn" do
+                %i.fa.fa-check.font
+                %span やることリスト
+            %li
+              = link_to users_path, class: "header-mypage-btn" do
+                %i.fa.fa-user-circle.font
+                %span マイページ
+          - else
+            %li
+              = link_to "ログイン", new_user_session_path, class: "header-login-btn"
+            %li
+              = link_to "新規登録",  new_users_registrations_path, class: "header-signup-btn"
