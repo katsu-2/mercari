@@ -30,7 +30,7 @@ class Item < ApplicationRecord
 
   enum size: {"XXS以下": 0, "XS(SS)": 1, "S": 2, "M": 3, "L": 4, "XL": 5, "2XL": 6, "3XL": 7, "4XL": 8, "5XL": 9, "FREESIZE": 10}
 
-  # enum status: {published: 0, stopped: 1, trading: 2, sold: 3}
+  enum status: {"出品中": 0, "出品公開停止中": 1, "取引中": 2, "売り切れ": 3}
 
   validates :name, length: { maximum: 40 }, presence: true
   validates :description, length: { maximum: 1000 }, presence: true
