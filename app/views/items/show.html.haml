@@ -1,5 +1,32 @@
 / ヘッダー
-= render 'shared/header'
+%header
+  #header-innner
+    .clearfix
+      #header-logo
+        = link_to items_path do
+          = image_tag "/logo.png"
+      %form#header-search-form
+        %input{name: "search", placeholder: "    何かお探しですか?", type: "search"}/
+        %i.fa.fa-search
+    #header-nav-box.clearfix
+      %nav#header-nav
+        %ul#header-nav__list
+          %li
+            %h2
+              = link_to items_path do
+                %i.fa.fa-list
+                %span カテゴリーから探す
+          %li
+            %h2
+              = link_to items_path do
+                %i.fa.fa-shopping-bag
+                %span ブランドから探す
+      #header-login
+        %ul#header-login__nav
+          %li
+            = link_to "ログイン", items_path, class: "header-login-btn"
+          %li
+            = link_to "新規登録", items_path, class: "header-signup-btn"
 / ヘッダーここまで
 
 / パンくずリスト
