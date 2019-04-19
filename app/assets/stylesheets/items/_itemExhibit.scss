@@ -78,15 +78,15 @@
   height: 100px;
   padding: 10px 0;
   position: relative;
-}
 
-.sell-upload-image img {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
+  img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+  }
 }
 
 .sell-upload-edit-button {
@@ -94,15 +94,12 @@
   height: 50px;
   display: flex;
   justify-content: space-between;
+  a {
+    display: inline-block;
+    line-height: 50px;
+    width: 50%;
+  }
 }
-
-.sell-upload-edit-button a {
-  display: inline-block;
-  line-height: 50px;
-  width: 50%;
-}
-
-
 
 .sell-upload-drop-file {
   border: 0;
@@ -176,7 +173,6 @@
 
 
 .sell-price-input {
-
   text-align: right;
 
   div {
