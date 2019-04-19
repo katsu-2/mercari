@@ -47,13 +47,13 @@
             = f.label :size, "商品のサイズ"
             %span.form-require 必須
             .select-wrap
-              = f.select :size, Item.sizes.keys.to_a, {prompt: "---"}, {class: 'select-default'}
+              = f.select :size, Item.sizes_i18n.keys.map {|k| [Item.sizes_i18n[k], k]}, {prompt: "---"}, {class: 'select-default'}
               %i.fa.fa-angle-down
           .form-group
             = f.label :condition, "商品の状態"
             %span.form-require 必須
             .select-wrap
-              = f.select :condition, Item.conditions.keys.to_a, {prompt: "---"}, {class: 'select-default'}
+              = f.select :condition, Item.conditions_i18n.keys.map {|k| [Item.conditions_i18n[k], k]}, {prompt: "---"}, {class: 'select-default'}
               %i.fa.fa-angle-down
       .sell-content.clearfix
         %h3.sell-sub-head 配送について
@@ -62,25 +62,25 @@
             = f.label :delivery_fee, "配送料の負担"
             %span.form-require 必須
             .select-wrap
-              = f.select :delivery_fee, Item.delivery_fees.keys.to_a, {prompt: "---"}, {class: 'select-default'}
+              = f.select :delivery_fee, Item.delivery_fees_i18n.keys.map {|k| [Item.delivery_fees_i18n[k], k]}, {prompt: "---"}, {class: 'select-default'}
               %i.fa.fa-angle-down
           .form-group
             = f.label :delivery_way, "配送の方法"
             %span.form-require 必須
             .select-wrap
-              = f.select :delivery_way, Item.delivery_ways.keys.to_a, {prompt: "---"}, {class: 'select-default'}
+              = f.select :delivery_way, Item.delivery_ways_i18n.keys.map {|k| [Item.delivery_ways_i18n[k], k]}, {prompt: "---"}, {class: 'select-default'}
               %i.fa.fa-angle-down
           .form-group
             = f.label :delivery_area, "発送元の地域"
             %span.form-require 必須
             .select-wrap
-              = f.select :delivery_area, Item.delivery_areas.keys.to_a, {prompt: "---"}, {class: 'select-default'}
+              = f.select :delivery_area, Item.delivery_areas_i18n.keys.map {|k| [Item.delivery_areas_i18n[k], k]}, {prompt: "---"}, {class: 'select-default'}
               %i.fa.fa-angle-down
           .form-group
             = f.label :delivery_date, "発送までの日数"
             %span.form-require 必須
             .select-wrap
-              = f.select :delivery_date, Item.delivery_dates.keys.to_a, {prompt: "---"}, {class: 'select-default'}
+              = f.select :delivery_date, Item.delivery_dates_i18n.keys.map {|k| [Item.delivery_dates_i18n[k], k]}, {prompt: "---"}, {class: 'select-default'}
               %i.fa.fa-angle-down
       .sell-content.clearfix
         %h3.sell-sub-head 販売価格(300~9,999,999)
@@ -110,7 +110,7 @@
             またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売
             は犯罪であり処罰される可能性があります。
             また、出品をもちまして加盟店規約に同意したことになります。
-        = f.hidden_field :status, value: "出品中"
+        = f.hidden_field :status, value: "exhibited"
         = f.submit class: "btn-default btn-red", value: "出品する"
         %a.btn-default.btn-gray もどる
 
