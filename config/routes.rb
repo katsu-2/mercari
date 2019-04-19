@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :confirmations, only:[:show]
   end
 
+
   resources :users, only:[:show]
 
 
