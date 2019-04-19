@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   namespace :mypages do
     resources :profiles, only:[:show]
+    # resources :logouts, only: [:index]
     resource :registrations, only: [:new, :create]
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
@@ -25,7 +26,7 @@ Rails.application.routes.draw do
     resource :identityinformations, only: [:show]
   end
 
-  get "logout" => 'logouts#destory'
+  get "logout" => 'logouts#show'
 
 end
 
