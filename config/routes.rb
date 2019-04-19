@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :users, only:[:show]
-
+  resources :logouts, only: [:show]
 
   namespace :mypages do
     resources :profiles, only:[:show]
@@ -24,8 +24,5 @@ Rails.application.routes.draw do
     resource :credits, only: [:new, :create]
     resource :identityinformations, only: [:show]
   end
-
-  get "logout" => 'logouts#show'
-
 end
 
