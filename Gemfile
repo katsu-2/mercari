@@ -44,12 +44,14 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'factory_bot_rails', '~> 5.0', '>= 5.0.1'
   gem 'rails-controller-testing'
-  gem 'faker', '~> 1.9', '>= 1.9.3'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'faker'
 end
 
 group :development do
@@ -75,6 +77,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
+gem "jquery-rails"
+gem 'rails-i18n'
+gem 'enum_help'
 
 group :production do
   gem 'unicorn', '5.4.1'

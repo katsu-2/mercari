@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   root "items#index"
 
 
-  resources :items, only:[:index, :show, :new] do
+  resources :items, only:[:index, :show, :new, :create] do
     resources :confirmations, only:[:show]
   end
 
+
   resources :users, only:[:show]
+
 
 
   namespace :mypages do
