@@ -44,29 +44,19 @@
 .item-box-wrap
   / 商品詳細部分
   %section.item-box-container
-    %h1.item-name トップス シップス ブラウス ネイビー
+    %h1.item-name
+      = @item.name
     .item-main-content.clearfix
       .item-photo
         .item-photo__stage
           .item-photo__stage__item
             .item-photo__stage__item__inner
-              = image_tag "users/item-photo1.jpg"
+              = image_tag @item.images[0]
         .item-photo__dots
-          .item-photo__dots__dot
-            .item-photo__dots__dot__inner
-              = image_tag "users/item-photo1.jpg"
-          .item-photo__dots__dot
-            .item-photo__dots__dot__inner
-              = image_tag "users/item-photo2.jpg"
-          .item-photo__dots__dot
-            .item-photo__dots__dot__inner
-              = image_tag "users/item-photo3.jpg"
-          .item-photo__dots__dot
-            .item-photo__dots__dot__inner
-              = image_tag "users/item-photo4.jpg"
-          .item-photo__dots__dot
-            .item-photo__dots__dot__inner
-              = image_tag "users/item-photo5.jpg"
+          - @item.images.each do |image|
+            .item-photo__dots__dot
+              .item-photo__dots__dot__inner
+                = image_tag image
       %table.item-detail-table
         %tbody
           %tr
@@ -76,13 +66,13 @@
                 congo  引っ越し売り切りスパート！
               %div
                 .item-user-ratings
-                  %i.fa.fa-smile-wink
+                  %i.fa.fa-angellist
                   %span 15
                 .item-user-ratings
-                  %i.fa.fa-meh
+                  %i.fa.fa-angellist
                   %span 0
                 .item-user-ratings
-                  %i.fa.fa-sad-tear
+                  %i.fa.fa-angellist
                   %span 0
           %tr
             %th カテゴリー
@@ -104,34 +94,39 @@
                 %div シップス
           %tr
             %th 商品のサイズ
-            %td S
-          %tr
-            %th 商品のサイズ
-            %td S
+            %td
+              = @item.size_i18n
           %tr
             %th 商品の状態
-            %td 目立った傷や汚れなし
+            %td
+              = @item.condition_i18n
           %tr
             %th 配送料の負担
-            %td 送料込み(出品者負担)
+            %td
+              = @item.delivery_fee_i18n
           %tr
             %th 配送の方法
-            %td 未定
+            %td
+              = @item.delivery_way_i18n
           %tr
             %th 配送元地域
-            %td 静岡県
+            %td
+              = @item.delivery_area_i18n
           %tr
             %th 発送日の目安
-            %td 4~7日で発送
+            %td
+              = @item.delivery_date_i18n
     .item-price-box
-      %span.item-price.bold ¥ 1,800
+      %span.item-price.bold
+        ¥
+        = inserting_to_commma(@item.price)
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     = link_to items_path, class: "item-buy-btn" do
       購入画面へ進む
     .item-description
       %p.item-description__inner
-        SHIPS  サイズ36 素材の違う2枚の生地を重ねてあり、デザイン性のあるブラウスです。 袖部分はメッシュ素材の1枚だけですので、涼しく着られます。色がネイビー1色ですので、どんなコーデにも合わせられます。中古品である事をご理解いただける方、宜しくお願い致します。
+        = @item.description
     .item-button-container.clearfix
       .item-button-left
         %button.item-button
