@@ -331,8 +331,8 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)
-  rails-i18n
   rails-controller-testing
+  rails-i18n
   rspec-rails (~> 3.8, >= 3.8.2)
   sass-rails (~> 5.0)
   selenium-webdriver
