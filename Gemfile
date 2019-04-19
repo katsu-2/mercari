@@ -79,6 +79,7 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 gem "jquery-rails"
 gem 'rails-i18n'
+gem 'enum_help'
 
 group :production do
   gem 'unicorn', '5.4.1'
