@@ -6,8 +6,9 @@
       = link_to '新規会員登録', '#'
     .login__to__sns
       %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-        = fa_icon "facebook", class: "btn-sns-facebook__icon"
-        Facebookでログイン
+        = link_to user_facebook_omniauth_callback_path, class: "btn-sns-facebook__icon" do
+          = fa_icon "facebook"
+          Facebookでログイン
       %button#google-login.btn-default.btn-sns.btn-sns-google
         = image_tag("google.png", class: "btn-sns-google__icon")
         Googleでログイン
