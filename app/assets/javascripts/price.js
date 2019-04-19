@@ -4,8 +4,8 @@ $(function () {
 
   $("#item_price").on("keyup", function(){
     var price = $("#item_price").val();
-    var commissionPrice = price * commission;
-    var profit = price - (price * commission);
+    var commissionPrice = Math.round(price * commission);
+    var profit = Math.round(price - (price * commission));
 
     profit = String(profit).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
     commissionPrice = String(commissionPrice).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
