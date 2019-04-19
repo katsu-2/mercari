@@ -12,12 +12,16 @@ Rails.application.routes.draw do
     resources :confirmations, only:[:show]
   end
 
-  resource :users, only:[:show] do
-    resource :profiles, only:[:show]
+
+  resources :users, only:[:show]
+
+
+  namespace :mypages do
+    resources :profiles, only:[:show]
     resource :registrations, only: [:new, :create]
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
-    resource :payments, only: [:new, :create]
+    resource :credits, only: [:new, :create]
     resource :identityinformations, only: [:show]
   end
 

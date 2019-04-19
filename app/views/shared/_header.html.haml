@@ -32,7 +32,7 @@
                 %i.fa.fa-check.font
                 %span やることリスト
             %li
-              = link_to users_path, class: "header-mypage-btn" do
+              = link_to user_path(current_user), class: "header-mypage-btn" do
                 %i.fa.fa-user-circle.font
                 %span マイページ
           - else

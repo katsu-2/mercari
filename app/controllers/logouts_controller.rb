@@ -1,5 +1,5 @@
 class LogoutsController < ApplicationController
 
-def destory
-end
+  def destory
+  end
 end
