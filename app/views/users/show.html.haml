@@ -26,7 +26,8 @@
         = link_to items_path do
           %figure
             = image_tag "users/avatar.jpg", width: "60", height: "60"
-          %h2 ユーザネーム
+          %h2
+            = @user.nickname
           .mypage-user-icon__bottom
             .mypage-user-icon__bottom__eval
               評価
