@@ -5,6 +5,7 @@ FactoryBot.define do
     price                 { Faker::Number.within(300..9999999) }
     description           { Faker::Lorem.sentences }
     size                  { Faker::Number.within(0..10) }
+    status                { Faker::Number.within(0..3) }
     condition             { Faker::Number.within(0..5) }
     delivery_fee          { Faker::Number.within(0..1) }
     delivery_way          { Faker::Number.within(0..8) }
