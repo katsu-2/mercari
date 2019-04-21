@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   # belongs_to :cart
   has_many_attached :images
 
-  enum condition:       {brandNew: 0, nearUnused: 1, noDirt: 2, littleDirt: 3, dirt: 4, bad: 5}
+  enum condition: {brandNew: 0, nearUnused: 1, noDirt: 2, littleDirt: 3, dirt: 4, bad: 5}
 
   enum delivery_way: {undecided: 0, easyMercariPack: 1, postMail: 2, letterPack: 3, normalPost: 4, yamato: 5, postPack: 6, clickPost: 7, postPacket: 8}
 
@@ -42,4 +42,8 @@ class Item < ApplicationRecord
   validates :delivery_date, presence: true
   validates :delivery_area, presence: true
   validates :user_id, presence: true
+
+  def insert_comma
+    self.price = (price * 1.08).round
+  end
 end

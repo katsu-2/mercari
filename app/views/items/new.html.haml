@@ -3,7 +3,7 @@
 .single-main
   %section.buy-item-container
     %h2.single-head 商品の情報を入力
-    = form_for @item, html: {class: "sell-form"} do |f|
+    = form_for @item, html: {class: "sell-form", autocomplete: "off"} do |f|
       .sell-upload-box
         %h3.sell-upload-box-head
           出品画像
@@ -94,15 +94,15 @@
                 .l-right.sell-price-input
                   ¥
                   .div
-                    = f.text_field :price, class: "input-default", placeholder: "例）300"
+                    = f.text_field :price, class: "input-default", placeholder: "例）300", type: "number"
 
             %li.clearfix
               .l-left
                 販売手数料 (10%)
-              .l-right -
+              .l-right.comission-price -
             %li.clearfix.bold
-              .l-left 販売利益
-              .l-right -
+              .l-left.bold 販売利益
+              .l-right.profit.bold -
       .sell-content.sell-btn-box
         %div
           %p
