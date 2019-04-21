@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :items, only:[:index, :show, :new, :create] do
     resources :confirmations, only:[:show]
+    resources :carts, only: [:new,:create]
   end
 
 
