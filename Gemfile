@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
-gem 'devise', '~> 4.6', '>= 4.6.2'
-gem 'gretel', '~> 3.0', '>= 3.0.9'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -80,6 +79,9 @@ gem "font-awesome-rails"
 gem "jquery-rails"
 gem 'rails-i18n'
 gem 'enum_help'
+gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'gretel', '~> 3.0', '>= 3.0.9'
+gem 'payjp', '~> 0.0.6'
 
 group :production do
   gem 'unicorn', '5.4.1'
