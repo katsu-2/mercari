@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many  :profits
   has_many  :likes
   has_many  :comments
-  has_many  :cart;
+  has_many  :carts
+  has_one   :credit
 
   validates :nickname, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
