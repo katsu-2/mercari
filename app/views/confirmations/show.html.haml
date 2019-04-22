@@ -10,7 +10,8 @@
         %p.buy-item-name.bold GLAZOS ロンT 120㎝
         %form.buy-form
           %p.buy-price-ja.bold
-            ¥ 300
+            ¥
+            = @item.price
             %span.item-shipping-fee.f14.bold 送料込み
           %ul.buy-accordion.not-have
             %li.accordion-parent
@@ -20,7 +21,8 @@
             %li.buy-price-row.buy-you-pay.bold
               .buy-price-cell 支払い金額
               .buy-price-cell
-                %span ¥ 300
+                %span ¥
+                = @item.price
 
           %p.has-error-text
             この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
@@ -28,6 +30,8 @@
             %li.accordion-parent
               .accordion-toggle
                 購入する
+            = form_tag(action: :create, method: :post) do
+              %script.payjp-button{"data-key": "pk_test_3b77664fc60cd560ee4d08a4", src: "https://checkout.pay.jp/", type: "text/javascript",class: "paybutton","data-text":  "購入する"}
           %p アプリをお持ちでない方は以下よりインストールしてご利用いただけます。
           %br
           %div
