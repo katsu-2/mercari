@@ -16,6 +16,7 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @category = Category.where(parent_id: "0")
     @item = Item.new(item_params)
     if @item.save
       redirect_to root_path, notice: "商品を出品しました"
