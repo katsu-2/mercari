@@ -8,23 +8,13 @@
         %h3.sell-upload-box-head
           出品画像
           %span.form-require 必須
-        %p 最大10枚までアップロードできます
+        %p 最大5枚までアップロードできます
         .sell-dropbox-wrap
-          .sell-dropbox-item
-            %figure.sell-upload-image
-              = image_tag "discover.png"
-            .sell-upload-edit-button
-              =link_to "編集", items_path
-              =link_to "削除", items_path
-          .sell-dropbox-item
-            %figure.sell-upload-image
-              = image_tag "discover.png"
-            .sell-upload-edit-button
-              =link_to "編集", items_path
-              =link_to "削除", items_path
-          .sell-dropbox-item
-            = f.file_field :images, class: "sell-upload-drop-file image-input-form", multiple: true do
-              %pre ドラッグアンドドロップまたはクリックしてファイルをアップロード
+          = f.file_field :images, class: "sell-upload-drop-file image-input-form", multiple: true
+          .sell-dropbox-upload-item
+            %pre クリックしてファイルをアップロード
+          -# = f.label :images, class: "sell-dropbox-item" do
+            -# %pre ドラッグアンドドロップまたはクリックしてファイルをアップロード
       .sell-content
         .form-group
           = f.label :name, "商品名"
