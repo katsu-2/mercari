@@ -7,7 +7,9 @@ class Mypages::CreditsController < ApplicationController
 
   def create
     #顧客を作成
-    customer = Payjp::Customer.create(card: params['payjp-token'])
+    customer = Payjp::Customer.create(
+      card: params['payjp-token']
+    )
 
     #カードトークンを用いて支払いを作成。
     # charge = Payjp::Charge.create(
