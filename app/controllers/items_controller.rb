@@ -32,6 +32,13 @@ class ItemsController < ApplicationController
     end
   end
 
+  def get_category_id
+    @category_parent = Category.find(params[:category_id])
+    @category_children =  @category_parent.children
+    respond_to do |format|
+      format.json { @category_children }
+    end
+  end
 
   private
     def item_params
