@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :items, only:[:index, :show, :new, :create] do
     collection do
       post :upload_image
+      post :get_category_id
     end
     resources :confirmations, only:[:show]
   end

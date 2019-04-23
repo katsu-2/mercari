@@ -149,6 +149,14 @@
   }
 }
 
+.form-group-category {
+  margin: 40px 0 0;
+  label {
+    display: inline-block;
+    font-weight: 900;
+  }
+}
+
 .sell-content {
   padding: 40px;
   border-top: 1px solid #eee;
@@ -167,6 +175,24 @@
 }
 
 .select-wrap {
+  margin: 8px 0 0;
+  position: relative;
+  background: #fff;
+  i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 28px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+}
+
+.select-wrap-category,
+.select-wrap-category-children,
+.select-wrap-category-grand-children {
   margin: 8px 0 0;
   position: relative;
   background: #fff;

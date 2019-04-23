@@ -32,9 +32,17 @@ class ItemsController < ApplicationController
     end
   end
 
+  def get_category_id
+    @category_parent = Category.find(params[:category_id])
+    @category_children =  @category_parent.children
+    respond_to do |format|
+      format.json { @category_children }
+    end
+  end
+
   private
     def item_params
-      params.require(:item).permit(:name, :description, :size, :condition, :delivery_fee, :delivery_date, :delivery_area, :delivery_way, :price, :status).merge(user_id: User.first.id, images: uploaded_images)
+      params.require(:item).permit(:name, :description, :size, :condition, :delivery_fee, :delivery_date, :delivery_area, :delivery_way, :price, :status, :category_id).merge(user_id: User.first.id, images: uploaded_images)
     end
 
     def create_blob(uploading_file)
