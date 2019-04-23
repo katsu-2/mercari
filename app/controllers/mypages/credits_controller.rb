@@ -1,6 +1,6 @@
 class Mypages::CreditsController < ApplicationController
   require 'payjp'
-  Payjp.api_key = 'sk_test_99cbddd50ac3a80c46e3aa61'
+  Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
 
   def new
   end
@@ -10,10 +10,10 @@ class Mypages::CreditsController < ApplicationController
     customer = Payjp::Customer.create(card: params['payjp-token'])
 
     #カードトークンを用いて支払いを作成。
-    charge = Payjp::Charge.create(
-      amount:    3500,
-      customer:  customer,
-      currency:  'jpy'
-    )
+    # charge = Payjp::Charge.create(
+    #   amount:    3500,
+    #   customer:  customer,
+    #   currency:  'jpy'
+    # )
   end
 end

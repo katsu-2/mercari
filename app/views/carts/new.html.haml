@@ -30,8 +30,6 @@
             %li.accordion-parent
               .accordion-toggle
                 購入する
-          = form_tag(action: :create, method: :post) do
-            %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}
           %p アプリをお持ちでない方は以下よりインストールしてご利用いただけます。
           %br
           %div
