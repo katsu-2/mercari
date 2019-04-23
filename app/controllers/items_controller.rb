@@ -32,9 +32,10 @@ class ItemsController < ApplicationController
     end
   end
 
+
   private
     def item_params
-      params.require(:item).permit(:name, :description, :size, :condition, :delivery_fee, :delivery_date, :delivery_area, :delivery_way, :price, :status).merge(user_id: User.first.id, images: uploaded_images)
+      params.require(:item).permit(:name, :description, :size, :condition, :delivery_fee, :delivery_date, :delivery_area, :delivery_way, :price, :status, :category_id).merge(user_id: User.first.id, images: uploaded_images)
     end
 
     def create_blob(uploading_file)
