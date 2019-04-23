@@ -86,8 +86,6 @@ ja:
         free: FREESIZE
       status:
         exhibited: 出品中
-        stopped: 出品公開停止中
-        traiding: 取引中
         sold: 売り切れ
 
 
