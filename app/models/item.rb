@@ -42,6 +42,8 @@ class Item < ApplicationRecord
   validates :delivery_date, presence: true
   validates :delivery_area, presence: true
   validates :user_id, presence: true
+  validates :category_id, presence: true
+  validates :images, presence: true
 
   def insert_comma
     self.price = (price * 1.08).round
