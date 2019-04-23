@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
 
   resources :items, only:[:index, :show, :new, :create] do
+    collection do
+      post :upload_image
+    end
     resources :confirmations, only:[:show]
   end
 
