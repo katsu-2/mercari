@@ -11,15 +11,7 @@
         %p 最大5枚までアップロードできます
         .sell-dropbox-wrap
           = f.file_field :images, class: "sell-upload-drop-file image-input-form", multiple: true
-          - @item.images.each do |image|
-            .sell-dropbox-item
-              %figure.sell-upload-image
-                = image_tag image, id: "file-preview"
-                = f.hidden_field :images, name: "item[images][]",value: "#{image.blob.id}",style: "display: none;"
-                -# %input#item_images{multiple: "multiple", name: "item[images][]", type: "hidden", value: "${data.image_id}"}/
-              .sell-upload-edit-button
-                %a{:href => ""} 編集
-                %a.sell-upload-image-delete{:href => ""} 削除
+          = render partial: "editImage",locals: { item: @item, f: f }
           .sell-dropbox-upload-item
             %pre クリックしてファイルをアップロード
       .sell-content
