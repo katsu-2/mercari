@@ -1,27 +1,24 @@
 class CartsController < ApplicationController
+  include Card
+
   before_action :set_item, only: [:new, :create]
-  require 'payjp'
-  Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
 
   def new
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
     @cart = Cart.new
     customer_id = Credit.find_by(user_id: current_user.id).customer_id
     customer = Payjp::Customer.retrieve(customer_id)
-    # binding.pry
   end
 
   def create
-    # customer = current_user.credit.customer_id
-    @cart = @item.cart.new(user_id: current_user.id)
-    customer_id = Credit.find_by(user_id: current_user.id).customer_id
-    price = @item.price
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    create_charge(@item.price)
+    @cart = @item.carts.new(user_id: current_user.id)
+    @item.status = 1
+    @cart.save
+    @item.save
+    redirect_to root_path
 
-    #支払いの作成
-    Payjp::Charge.create(
-      amount:    price,
-      customer:  customer_id,
-      currency:  'jpy'
-    )
   end
 
   private
@@ -29,8 +26,4 @@ class CartsController < ApplicationController
   def set_item
     @item = Item.find(params[:item_id])
   end
-
-  # def cart_params
-  #   params.require(:cart).permit(:user_id, :item_id)
-  # end
 end

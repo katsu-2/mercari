@@ -21,5 +21,4 @@ class Mypages::CreditsController < ApplicationController
       end
     end
   end
-
 end

@@ -30,8 +30,6 @@
             %ul.buy-accordion.not-have
               %li.accordion-parent
                 .accordion-toggle
-                / = form_tag(action: :create, method: :post) do
-                /   = button_tag("購入する")
                 = f.submit '購入する'
 
             %p アプリをお持ちでない方は以下よりインストールしてご利用いただけます。
