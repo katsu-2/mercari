@@ -1,6 +1,10 @@
 class Mypages::CreditsController < ApplicationController
   include Card
 
+  def index
+    @credits = Credit.all
+  end
+
   def new
     @credit = Credit.new
   end

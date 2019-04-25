@@ -7,7 +7,7 @@
       = form_with model: @cart, url: item_carts_path(@item), local: true do |f|
         .buy-content-inner
           %h3.buy-item-image
-            = image_tag "https://static.mercdn.net/thumb/photos/m31601106060_1.jpg?1555295258",  class: "is-higher-height lazyloaded"
+            = image_tag @item.images[0],class: "is-higher-height lazyloaded"
           %p.buy-item-name.bold GLAZOS ロンT 120㎝
           %form.buy-form
             %p.buy-price-ja.bold
