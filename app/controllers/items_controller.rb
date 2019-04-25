@@ -1,5 +1,8 @@
 class ItemsController < ApplicationController
 
+  before_action :set_item, only: [:show, :edit, :update]
+  before_action :set_category, only: [:edit]
+
 
   def index
 
@@ -7,7 +10,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   def new
@@ -26,6 +28,17 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.where(parent_id: "0")
+  end
+
+  def update
+    @item.images.detach
+    @item.update(item_params)
+    redirect_to item_path(params[:id])
+    flash.now[:success] = "商品情報の編集が完了しました"
+  end
+
   def upload_image
     @image_blob = create_blob(params[:image])
     respond_to do |format|
@@ -42,8 +55,20 @@ class ItemsController < ApplicationController
   end
 
   private
+    def set_item
+      @item = Item.with_attached_images.find(params[:id])
+    end
+
     def item_params
       params.require(:item).permit(:name, :description, :size, :condition, :delivery_fee, :delivery_date, :delivery_area, :delivery_way, :price, :status, :category_id).merge(user_id: User.first.id, images: uploaded_images)
+    end
+
+    def set_category
+      @category_present = Category.find(@item.category_id)
+      @category_present_all = Category.where(parent_id: @category_present.parent_id)
+      @category_parent = @category_present.parent
+      @category_parent_all = Category.where(parent_id: @category_parent.parent_id)
+      @category_root = @category_parent.parent
     end
 
     def create_blob(uploading_file)
