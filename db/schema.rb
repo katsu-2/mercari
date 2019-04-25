@@ -123,6 +123,8 @@ ActiveRecord::Schema.define(version: 2019_04_23_063722) do
     t.integer "delivery_way"
     t.integer "delivery_area"
     t.integer "status", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -180,6 +182,7 @@ ActiveRecord::Schema.define(version: 2019_04_23_063722) do
   add_foreign_key "comments", "users"
   add_foreign_key "credits", "users"
   add_foreign_key "images", "items"
+  add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
   add_foreign_key "likes", "items"
   add_foreign_key "likes", "users"

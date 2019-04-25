@@ -1,0 +1,8 @@
+- item.images.each do |image|
+  .sell-dropbox-item
+    %figure.sell-upload-image
+      = image_tag image, id: "file-preview"
+      = f.hidden_field :images, name: "item[images][]",value: "#{image.blob.id}",style: "display: none;"
+    .sell-upload-edit-button
+      %a{:href => ""} 編集
+      %a.sell-upload-image-delete{:href => ""} 削除
