@@ -1,0 +1,67 @@
+= form_for @user, id: 'new_user' do |f|
+  = render 'shared/headerNewUser'
+  %main.single-main
+    %section.l--single
+      %h2.l--single--head 会員情報入力
+      .l--single--inner
+        .form-group
+          %label{for: "nickname"} ニックネーム
+          %span.form-require 必須
+          = f.text_field :nickname, class: "input-default", placeholder: "例）メルカリ太郎", type: "text"
+
+        .form-group
+          %label{for: "email"} メールアドレス
+          %span.form-require 必須
+          = f.email_field :email, class: "input-default", placeholder: " PC・携帯どちらでも可", type: "email"
+        .form-group
+          %h3.text-left.l-chapter-sub-head 本人確認
+          %p.l--single__text
+          安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+        .form-group
+          %label{for: "family_name"} 姓(全角)
+          %span.form-require 必須
+          = f.text_field :family_name, class: "input-default", placeholder: "例）山田", type: "text"
+        .form-group
+          %label{for: "first_name"} 名(全角)
+          %span.form-require 必須
+          = f.text_field :first_name, class: "input-default", placeholder: "例) 彩",type: "text"
+        .form-group
+          %label{for: "text"} 姓カナ(全角)
+          %span.form-require 必須
+          = f.text_field :family_kana, class: "input-default",placeholder: "例）ヤマダ", type: "text"
+        .form-group
+          %label{for: "text"} 名カナ(全角)
+          %span.form-require 必須
+          = f.text_field :first_kana, class: "input-default",placeholder: "例）アヤ", type: "text"
+        .form-group
+          %label{for: "birthday"} 生年月日
+          %span.form-require 必須
+          %br/
+          .birthday-select-wrap
+            .select-wrap
+              %select.select-default{name: "year"}
+              %i.icon-arrow-bottom
+            %span 年
+          .birthday-select-wrap
+            .select-wrap.select-wrap__month
+              %select.select-default{name: "month"}
+              %i.icon-arrow-bottom
+            %span 月
+          .birthday-select-wrap
+            .select-wrap.select-wrap__day
+              %select.select-default{name: "day"}
+              %i.icon-arrow-bottom
+            %span 月
+          .clearfix
+          %p.form-info-text
+            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+      .l--single--inner
+        .form-group
+          / - binding.pry
+          %p.l--single--text.text--center
+            「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします。
+          = f.submit "次へ進む", class: "btn-default btn-red"
+
+          .form-group.text--right
+            %p
+              = link_to "本人確認について" "#"

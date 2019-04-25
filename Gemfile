@@ -84,3 +84,7 @@ gem 'enum_help'
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
