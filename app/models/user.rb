@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many  :likes
   has_many  :comments
   has_many  :carts
-  has_one   :credit
+  has_many  :credits
 
   validates :nickname, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true

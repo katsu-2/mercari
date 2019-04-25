@@ -1,21 +1,25 @@
 class Mypages::CreditsController < ApplicationController
-  require 'payjp'
-  Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+  include Card
 
   def new
+    @credit = Credit.new
   end
 
   def create
-    #顧客を作成
-    customer = Payjp::Customer.create(
-      card: params['payjp-token']
-    )
+    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
 
-    #カードトークンを用いて支払いを作成。
-    # charge = Payjp::Charge.create(
-    #   amount:    3500,
-    #   customer:  customer,
-    #   currency:  'jpy'
-    # )
+    if current_user.credits.present?
+      flash[:notice] = "既にカードが登録されています"
+      redirect_to root_path
+    else
+      @credit = current_user.credits.new(customer_id: create_customer.id)
+      if @credit.save
+        flash[:notice] = "登録しました"
+        redirect_to root_path
+      else
+        render 'new'
+      end
+    end
   end
+
 end
