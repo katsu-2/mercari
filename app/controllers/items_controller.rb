@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :edit, :update]
-  before_action :set_category, only: [:edit]
+  before_action :set_category, only: :edit
 
 
   def index
@@ -40,6 +40,7 @@ class ItemsController < ApplicationController
     else
       flash.now[:alert] = "商品編集に失敗しました"
       render :edit
+    end
   end
 
   def upload_image
