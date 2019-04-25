@@ -9,11 +9,11 @@ Rails.application.routes.draw do
 
 
   resources :items, only:[:index, :show, :new, :create, :update, :edit, :destroy] do
+    resources :carts, only: [:new,:create]
     collection do
       post :upload_image
       post :get_category_id
     end
-    resources :confirmations, only:[:show]
   end
 
 
