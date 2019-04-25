@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
     else
       flash.now[:alert] = "商品削除に失敗しました"
       render :show
-    # end
+    end
   end
 
   def upload_image
