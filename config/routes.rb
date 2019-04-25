@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root "items#index"
 
 
-  resources :items, only:[:index, :show, :new, :create, :update, :edit] do
+  resources :items, only:[:index, :show, :new, :create, :update, :edit, :destroy] do
     collection do
       post :upload_image
       post :get_category_id
