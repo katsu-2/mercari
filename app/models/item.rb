@@ -5,8 +5,9 @@ class Item < ApplicationRecord
   has_many   :profits
   has_many   :likes
   belongs_to :user
-  # belongs_to :category
   has_many :carts
+  belongs_to :category
+
   has_many_attached :images
 
   enum condition: {brandNew: 0, nearUnused: 1, noDirt: 2, littleDirt: 3, dirt: 4, bad: 5}
@@ -42,6 +43,8 @@ class Item < ApplicationRecord
   validates :delivery_date, presence: true
   validates :delivery_area, presence: true
   validates :user_id, presence: true
+  validates :category_id, presence: true
+  validates :images, presence: true
 
   def insert_comma
     self.price = (price * 1.08).round
