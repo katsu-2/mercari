@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :set_category, only: :edit
 
 
@@ -41,6 +41,13 @@ class ItemsController < ApplicationController
       flash.now[:alert] = "商品編集に失敗しました"
       render :edit
     end
+  end
+
+  def destroy
+    # if item.user_id == current_user.id
+      @item.destroy
+      redirect_to root_path, notice: '商品を削除しました'
+    # end
   end
 
   def upload_image
