@@ -6,7 +6,7 @@ class Item < ApplicationRecord
   has_many   :likes
   belongs_to :user
   # belongs_to :category
-  has_one :cart
+  has_many :carts
   has_many_attached :images
 
   enum condition: {brandNew: 0, nearUnused: 1, noDirt: 2, littleDirt: 3, dirt: 4, bad: 5}
