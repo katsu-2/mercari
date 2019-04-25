@@ -23,4 +23,16 @@ $(function () {
       $(".profit").text("-");
     }
   });
+
+  if($("#item_price").length) {
+    var price = $("#item_price").val();
+    var commissionPrice = Math.round(price * commission);
+    var profit = Math.round(price - (price * commission));
+
+    profit = insertComma(profit);
+    commissionPrice = insertComma(commissionPrice);
+
+    $(".comission-price").text( "¥" + commissionPrice);
+    $(".profit").text( "¥" + profit);
+  }
 });
