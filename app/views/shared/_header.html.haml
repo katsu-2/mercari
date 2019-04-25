@@ -2,7 +2,7 @@
   #header-innner
     .clearfix
       #header-logo
-        = link_to items_path do
+        = link_to root_path do
           = image_tag "/logo.png"
       %form#header-search-form
         %input{name: "search", placeholder: "    何かお探しですか?", type: "search"}/
@@ -12,12 +12,12 @@
         %ul#header-nav__list
           %li
             %h2
-              = link_to items_path do
+              = link_to '#' do
                 %i.fa.fa-list
                 %span カテゴリーから探す
           %li
             %h2
-              = link_to items_path do
+              = link_to '#' do
                 %i.fa.fa-shopping-bag
                 %span ブランドから探す
       #header-login
