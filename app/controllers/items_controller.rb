@@ -34,9 +34,12 @@ class ItemsController < ApplicationController
 
   def update
     @item.images.detach
-    @item.update(item_params)
-    redirect_to item_path(params[:id])
-    flash.now[:success] = "商品情報の編集が完了しました"
+    if @item.update(item_params)
+      redirect_to item_path(params[:id])
+      flash.now[:success] = "商品情報の編集が完了しました"
+    else
+      flash.now[:alert] = "商品編集に失敗しました"
+      render :edit
   end
 
   def upload_image
