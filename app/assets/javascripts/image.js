@@ -56,4 +56,8 @@ $(function () {
       $('.sell-upload-drop-file').trigger('click');
     })
 
+    if($(".sell-dropbox-wrap").children().length > 6) {
+      $(".sell-dropbox-upload-item").css("display", "none");
+    }
+
 });
