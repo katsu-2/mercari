@@ -5,9 +5,10 @@ class CartsController < ApplicationController
 
   def new
     Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    @cards = Credit.all
     @cart = Cart.new
-    customer_id = Credit.find_by(user_id: current_user.id).customer_id
-    customer = Payjp::Customer.retrieve(customer_id)
+    customer_id = Credit.find_by(user_id: current_user.id).customer_id if customer_id.present?
+    Payjp::Customer.retrieve(customer_id) if customer_id.present?
   end
 
   def create

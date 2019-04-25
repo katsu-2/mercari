@@ -26,11 +26,14 @@
                   = @item.price
 
             %p.has-error-text
-              この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
-            %ul.buy-accordion.not-have
-              %li.accordion-parent
-                .accordion-toggle
-                = f.submit '購入する'
+            /   この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+            - if current_user.credits.present?
+              = f.submit '購入する', class: "buy-btn"
+            - else
+              .not-buy
+                %p.not-credit クレジットカードを登録して下さい
+
+
 
             %p アプリをお持ちでない方は以下よりインストールしてご利用いただけます。
             %br
