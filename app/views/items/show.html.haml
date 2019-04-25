@@ -41,6 +41,13 @@
 
 
 / 商品詳細セクション
+#modal{style: "display:none;"}
+  %h2 確認
+  %p 削除すると二度と復活できません。
+  %p 本当に削除しますか？
+  = link_to item_path, method: :delete, class: "item-buy-btn modal", id: "modal" do
+    この商品を削除する
+
 .item-box-wrap
   / 商品詳細部分
   %section.item-box-container
@@ -122,11 +129,17 @@
         = inserting_to_commma(@item.price)
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
-    = link_to items_path, class: "item-buy-btn" do
-      購入画面へ進む
     .item-description
       %p.item-description__inner
         = @item.description
+    -# - if current_user.id == @item.user_id
+    = link_to edit_item_path(params[:id]), class: "item-buy-btn" do
+      商品の編集
+    = link_to "#modal", class: "item-buy-btn modal", id: "modal" do
+      この商品を削除する
+    -# - else
+    = link_to items_path, class: "item-buy-btn" do
+      購入画面へ進む
     .item-button-container.clearfix
       .item-button-left
         %button.item-button
