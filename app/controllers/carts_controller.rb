@@ -16,9 +16,13 @@ class CartsController < ApplicationController
     create_charge(@item.price)
     @cart = @item.carts.new(user_id: current_user.id)
     @item.status = 1
-    @cart.save
-    @item.save
-    redirect_to root_path
+
+    if @cart.save && @item.save
+      flash[:notice] = "購入ありがとうございました。"
+      redirect_to root_path
+    else
+      render 'new'
+    end
 
   end
 
