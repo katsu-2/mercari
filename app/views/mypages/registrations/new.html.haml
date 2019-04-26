@@ -8,12 +8,9 @@
           = fa_icon 'envelope icon-mail'
           メールアドレスで登録
         %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-          = link_to user_facebook_omniauth_authorize_path, class: "btn-sns-facebook" do
-            .btn-sns-facebook__icon
-              = fa_icon "facebook"
-              Facebookで登録
+          = fa_icon "facebook", class: "btn-sns-facebook__icon"
+          Facebookで登録
         %button#google-login.btn-default.btn-sns.btn-sns-google
-          = link_to user_google_omniauth_authorize_path, class: "btn-sns-google__icon" do
-            = fa_icon "google"
-            Googleで登録
+          Googleで登録
+          = image_tag("google.png", class: "btn-sns-google__icon")
 = render 'shared/footer2'

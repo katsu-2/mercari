@@ -2,11 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,:omniauthable, omniauth_providers: [:google, :facebook]
-
-  
-  has_many    :sns_credentials
-  # belongs_to  :cart
+         :recoverable, :rememberable, :validatable
 
   has_many  :items
   has_many  :profits
@@ -15,7 +11,6 @@ class User < ApplicationRecord
   has_many  :carts
   has_many  :credits
 
-
   validates :nickname, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :family_name, presence: true
@@ -23,4 +18,3 @@ class User < ApplicationRecord
   validates :family_kana, presence: true
   validates :first_kana, presence: true
 end
-

@@ -6,13 +6,11 @@
       = link_to '新規会員登録', new_user_registration_path
     .login__to__sns
       %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-        = link_to user_facebook_omniauth_authorize_path, id: "facebook-login" do
-          = fa_icon "facebook", class: "btn-sns-facebook__icon"
-          Facebookでログイン
+        = fa_icon "facebook", class: "btn-sns-facebook__icon"
+        Facebookでログイン
       %button#google-login.btn-default.btn-sns.btn-sns-google
-        = link_to user_google_omniauth_callback_path, id: "google-login" do
-          = fa_icon "google", class: "btn-sns-google__icon"
-          Googleでログイン
+        = image_tag("google.png", class: "btn-sns-google__icon")
+        Googleでログイン
     = form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f|
       .login__form--inner
         .login__form--inner__group
@@ -23,8 +21,3 @@
           = f.submit "ログイン", class: "btn-default btn-red login-submit"
         = link_to 'パスワードをお忘れの方', '#', class: "login__form--inner__forget"
 = render 'shared/footer2'
-
-= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path
-
-
-= image_tag("google.png", class: "btn-sns-google__icon")
