@@ -18,15 +18,16 @@ Rails.application.routes.draw do
   end
 
 
+
   resources :users, only:[:show]
-  resources :logouts, only: [:show]
+  resources :logouts, only: [:index]
 
   namespace :mypages do
     resources :profiles, only:[:show]
     resource :registrations, only: [:new, :create]
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
-    resource :credits, only: [:new, :create]
+    resources :credits, only: [:index, :new, :create]
     resource :identityinformations, only: [:show]
   end
 end
