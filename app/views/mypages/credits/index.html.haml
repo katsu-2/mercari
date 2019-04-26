@@ -1,1 +1,55 @@
-= render 'shared/'
+= render 'shared/header'
+
+/ ヘッダーここまで
+
+/ パンくずリスト
+%nav.bread-crumb
+  %ul
+    %li.item-scope
+      = link_to "メルカリ", items_path
+      %i.fa.fa-chevron-right
+    %li.item-scope
+      = link_to "マイページ", items_path
+/ パンくずリスト
+
+
+
+
+
+/ メインコンテンツ
+.main-wrap
+  %main.main-container.clearfix
+    / メインコンテンツ メイン
+    .main-contents
+      .credit-wrap
+        %h1.pay-way
+          支払い方法
+        .credit-main
+          .card-content
+            .l-single-content
+              %h3.l-chapter-sub-head
+                クレジットカード一覧
+          .add-card
+            .l-single-content
+              / = link_to '#', class: "btn-default.btn-red.submit_button" do
+              /   %i.fa.fa-card
+              /   %span クレジットカードを追加する
+              = form_tag(action: :create, method: :post) do
+                %script.payjp-button{"data-key" => "pk_test_3b77664fc60cd560ee4d08a4", "data-on-created" => "onCreated", "data-partial" => "false", "data-submit-text" => "クレジットカードを追加する", "data-text" => "クレジットカードを追加する", :src => "https://checkout.pay.jp/", :type => "text/javascript"}
+
+          .how-to-pay
+            = link_to '#' do
+              %span
+                支払いについて
+              %i.fa.fa-chevron-right
+
+
+    / メインコンテンツ メイン ここまで
+
+
+    / メインコンテンツ サイド
+    = render partial: "shared/mypage-side"
+    / メインコンテンツ サイドここまで
+/ メインコンテンツここまで
+
+= render partial: "shared/footer"
