@@ -1,0 +1,73 @@
+= render 'shared/header2'
+
+%main.single-main
+  %section.l-single-container.buy-item-container
+    %h2.l-single-head 購入を確定しますか？
+    %section.buy-content.buy-item
+      = form_with model: @cart, url: item_carts_path(@item), local: true do |f|
+        .buy-content-inner
+          %h3.buy-item-image
+            = image_tag "https://static.mercdn.net/thumb/photos/m31601106060_1.jpg?1555295258",  class: "is-higher-height lazyloaded"
+          %p.buy-item-name.bold GLAZOS ロンT 120㎝
+          %form.buy-form
+            %p.buy-price-ja.bold
+              ¥
+              = @item.price
+              %span.item-shipping-fee.f14.bold 送料込み
+            %ul.buy-accordion.not-have
+              %li.accordion-parent
+                .accordion-toggle
+                  ポイントはありません
+            %ul.buy-price-table
+              %li.buy-price-row.buy-you-pay.bold
+                .buy-price-cell 支払い金額
+                .buy-price-cell
+                  %span ¥
+                  = @item.price
+
+            %p.has-error-text
+            /   この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+            - if current_user.credits.present?
+              = f.submit '購入する', class: "buy-btn"
+            - else
+              .not-buy
+                %p.not-credit クレジットカードを登録して下さい
+
+
+
+            %p アプリをお持ちでない方は以下よりインストールしてご利用いただけます。
+            %br
+            %div
+              = link_to items_path do
+                = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?3801675580"
+              = link_to items_path do
+                = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?3801675580"
+    %section.buy-content.buy-user-info
+      .buy-content-inner
+        %h3 配送先
+        %address.buy-user-info-text
+          〒000-000
+          %br/
+          東京都港区芝公園４丁目２−８
+          %br/
+          ユーザ名
+        %p.buy-user-info-text
+        = link_to items_path, class: "buy-user-info-fix" do
+          %span 変更する
+          %i.fa.fa-chevron-right
+    %section.buy-content.buy-user-info
+      .buy-content-inner
+        %h3 支払い方法
+        %p.buy-user-info-text
+          ************0000
+          %br/
+          00 / 00
+        %figure
+          = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/visa.svg?3801675580", height: "15", width: "49"
+        %p
+        = link_to new_mypages_credits_path, class: "buy-user-info-fix" do
+          %span 変更する
+          %i.fa.fa-chevron-right
+
+
+= render 'shared/footer2'

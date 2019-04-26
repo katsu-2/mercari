@@ -26,4 +26,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 config/credentials.yml.en
+
 /config/certs/*
+
+/config/initializers/setting.rb

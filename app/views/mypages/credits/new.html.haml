@@ -38,4 +38,5 @@
 
       %button.btn-default.btn-red 追加する
 
-
+      = form_tag(action: :create, method: :post) do
+        %script.payjp-button{"data-key" => "pk_test_3b77664fc60cd560ee4d08a4", "data-on-created" => "onCreated", "data-partial" => "false", "data-submit-text" => "カードの登録", "data-text" => "カードの登録", :src => "https://checkout.pay.jp/", :type => "text/javascript"}

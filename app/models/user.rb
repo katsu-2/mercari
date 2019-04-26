@@ -4,12 +4,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:omniauthable, omniauth_providers: [:google, :facebook]
 
-  has_many    :items
-  has_many    :profits
-  has_many    :likes
-  has_many    :comments
+  
   has_many    :sns_credentials
   # belongs_to  :cart
+
+  has_many  :items
+  has_many  :profits
+  has_many  :likes
+  has_many  :comments
+  has_many  :carts
+  has_many  :credits
+
 
   validates :nickname, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true

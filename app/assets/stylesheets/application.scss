@@ -1,5 +1,6 @@
 @import "reset";
 @import "font-awesome";
+@import "modaal";
 @import "common";
 @import "flash";
 @import "users/editprofile";
@@ -11,7 +12,6 @@
 @import "items/footer";
 @import "items/itemDetail";
 @import "items/itemExhibit";
-@import "items/confirmation";
 @import "users/login";
 @import "shared/header2";
 @import "shared/headerNewUser";
@@ -26,3 +26,4 @@
 @import "users/mypageSideContents";
 @import "logout";
 @import "users/identifyinformations";
+@import "carts";

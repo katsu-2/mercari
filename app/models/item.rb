@@ -5,8 +5,9 @@ class Item < ApplicationRecord
   has_many   :profits
   has_many   :likes
   belongs_to :user
+  has_many :carts
   belongs_to :category
-  # belongs_to :cart
+
   has_many_attached :images
 
   enum condition: {brandNew: 0, nearUnused: 1, noDirt: 2, littleDirt: 3, dirt: 4, bad: 5}
@@ -30,7 +31,7 @@ class Item < ApplicationRecord
 
   enum size: {xxs: 0, xs: 1, s: 2, m: 3, l: 4, xl: 5, xl2: 6, xl3: 7, xl4: 8, free: 9}
 
-  enum status: {exhibited: 0, stopped: 1, traiding: 2, sold: 3}
+  enum status: {exhibited: 0, sold: 1}
 
   validates :name, length: { maximum: 40 }, presence: true
   validates :description, length: { maximum: 1000 }, presence: true
