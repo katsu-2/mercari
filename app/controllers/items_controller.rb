@@ -5,8 +5,10 @@ class ItemsController < ApplicationController
 
 
   def index
+    @women = Category.find(1)
+    @women_child = @women.children
 
-
+  # binding.pry
   end
 
   def show

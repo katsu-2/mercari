@@ -12,49 +12,7 @@
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "レディース 新着アイテム", items_path
-    .items-box-contents.clearfix
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-                %i.fa.fa-heart
-                %span 2
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
+    = render partial: 'index'
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
   / レディースアイテム新着アイテム ここまで
@@ -62,47 +20,8 @@
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "メンズ 新着アイテム", items_path
-    .items-box-contents.clearfix
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
+    = render partial: 'index'
+
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
   / メンズアイテム新着アイテム ここまで
@@ -114,47 +33,8 @@
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "コーチ 新着アイテム", items_path
-    .items-box-contents.clearfix
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
+    = render partial: 'index'
+
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
   / コーチ新着アイテム ここまで
@@ -162,146 +42,11 @@
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "ルイヴィトン 新着アイテム", items_path
-    .items-box-contents.clearfix
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
-      %section.items-box
-        = link_to items_path do
-          %figure.items-box__image
-            = image_tag "/item.jpg"
-          .items-box__body
-            %h3.items-box__body__name チェックロングタイプ
-            .items-box__body__info.clearfix
-              .items-box__body__info__price ¥890
-              .items-box__body__info__likes
-              %p.items-box__body__info__tax (税込)
+    = render partial: 'index'
+
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
   / ルイヴィトン新着アイテム ここまで
 / ブランド新着アイテム ここまで
 
-
-/ 補足情報
-%aside.app-banner
-  .app-banner__pc
-    .app-banner__pc__inner
-      %h2 スマホでかんたんフリマアプリ
-      %p 今すぐ無料ダウンロード！
-      .app-banner__icon.clearfix
-        %figure
-          = image_tag "topPage/mercari_icon.png", width: "68"
-        %ul.clearfix
-          %li
-            = link_to items_path do
-              = image_tag "topPage/appstore.png", width: "133"
-          %li
-            = link_to items_path do
-              = image_tag "topPage/google.png", width: "133"
-    %figure.asidemain
-      = image_tag "topPage/smartphone.png", width: "300"
-/ 補足情報 ここまで
-/ フッター
-%footer#footer-wrap
-  %nav#footer-nav.clearfix
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "採用情報", items_path
-        %li
-          = link_to "プレスリリース", items_path
-        %li
-          = link_to "公式ブログ", items_path
-        %li
-          = link_to "メルカリロゴ利用ガイドライン", items_path
-        %li.footer-social-link
-          = link_to items_path do
-            %i.fa.fa-twitter
-        %li.footer-social-link
-          = link_to items_path do
-            %i.fa.fa-facebook
-    .footer-cell
-      %h2.footer-head ヘルプ&ガイド
-      %ul
-        %li
-          = link_to "メルカリガイド", items_path
-        %li
-          = link_to "らくらくメルカリ便", items_path
-        %li
-          = link_to "ゆうゆうメルカリ便", items_path
-        %li
-          = link_to "大型メルカリ便", items_path
-        %li
-          = link_to "車体取引ガイド", items_path
-        %li
-          = link_to "メルカリあんしん・あんぜん宣言！", items_path
-        %li
-          = link_to "偽ブランド品撲滅への取り組み", items_path
-        %li
-          = link_to "メルカリボックス", items_path
-    .footer-cell
-      %h2.footer-head プライバシーと利用規約
-      .inner-footer-cell
-        %ul
-          %li
-            = link_to "プライバシーポリシー", items_path
-          %li
-            = link_to "メルカリ利用規約", items_path
-          %li
-            = link_to "あんしんスマホサポート制度に関する利用特約", items_path
-          %li
-            = link_to "コンプライアンスポリシー", items_path
-      .inner-footer-cell
-        %ul
-          %li
-            = link_to "個人データの安全管理に関わる基本規約", items_path
-          %li
-            = link_to "特定商取引に関する表記", items_path
-          %li
-            = link_to "資金決済法に基づく表示", items_path
-          %li
-            = link_to "法令順守と犯罪抑止のために", items_path
-          %li
-            = link_to "返品・返金ポリシー", items_path
-
-  .footer-bottom
-    = link_to items_path do
-      = image_tag "/footer-logo.png", height: "33", width: "124"
-    %span.copy-right
-      %small ©︎ 2019 Mercari
-/ フッター ここまで
-/ 出品ボタン
-= link_to new_item_path, class: "exhibit-btn" do
-  %div 出品
-  %i.fa.fa-camera
-/ 出品ボタン ここまで
+= render 'shared/footer'
