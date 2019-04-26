@@ -13,14 +13,15 @@
           = f.label "メールアドレス"
           %span.form-require 必須
           = f.email_field :email, autocomplete: "off" ,placeholder: "PC・携帯どちらでも可", class: "input-default"
-        .form-group
-          = f.label "パスワード"
-          %span.form-require 必須
-          = f.password_field :password, autocomplete: "off", placeholder: "６文字以上", class: "input-default"
-        .form-group
-          = f.label "パスワード(確認)"
-          %span.form-require 必須
-          = f.password_field :password_confirmation, autocomplete: "off", placeholder: "６文字以上", class: "input-default"
+        - if @user.email == ""
+          .form-group
+            = f.label "パスワード"
+            %span.form-require 必須
+            = f.password_field :password, autocomplete: "off", placeholder: "６文字以上", class: "input-default"
+          .form-group
+            = f.label "パスワード(確認)"
+            %span.form-require 必須
+            = f.password_field :password_confirmation, autocomplete: "off", placeholder: "６文字以上", class: "input-default"
         .form-group
           %h3.text-left.l-chapter-sub-head 本人確認
           %p.l--single__text
