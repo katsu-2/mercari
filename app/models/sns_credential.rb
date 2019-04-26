@@ -5,6 +5,7 @@ class SnsCredential < ApplicationRecord
   def self.find_oauth(auth)
     # binding.pry
     sns = SnsCredential.where(uid: auth.uid, provider: auth.provider).first_or_create
+    # binding.pry
     if  sns.user
       user = sns.user
     else

@@ -11,12 +11,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
 
 
+    @sns_credential = SnsCredential.find(params[:id], session['devise.sns_id'])
+
+
     super
 
-    @sns_credential_user_id = session['devise.sns_id']
-    binding.pry
-    @sns_credential.save
-    #
+     @sns_credential.user_id = @user.id
+     @sns_credential.save
+    # @sns_credential.save(user_id: @user.id)
     # @sns_credential.user_id = User.
     # @sns_credential.save
 
