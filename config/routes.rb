@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
 
   resources :users, only:[:show]
-  resources :logouts, only: [:show]
+  resources :logouts, only: [:index]
 
   namespace :mypages do
     resources :profiles, only:[:show]
