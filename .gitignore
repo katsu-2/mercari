@@ -27,6 +27,4 @@
 /config/master.key
 config/credentials.yml.en
 
-/config/certs/*
-
 /config/initializers/setting.rb

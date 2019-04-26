@@ -87,7 +87,3 @@ gem 'rb-readline', '~> 0.5.5'
 group :production do
   gem 'unicorn', '5.4.1'
 end
-
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-google-oauth2'
