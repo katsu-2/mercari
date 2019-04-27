@@ -111,8 +111,13 @@
       = link_to "#modal", class: "item-buy-btn modal", id: "modal" do
         この商品を削除する
     - else
-      = link_to new_item_cart_path(@item), class: "item-buy-btn" do
-        購入画面へ進む
+      - if @item.status == "exhibited"
+        = link_to new_item_cart_path(@item), class: "item-buy-btn" do
+          購入画面へ進む
+      - else
+        .item-not-buy-btn
+          売り切れました
+
     .item-button-container.clearfix
       .item-button-left
         %button.item-button
@@ -215,85 +220,4 @@
   / 商品コメント部分 ここまで
 / 商品詳細セクション
 
-
-
-
-/ 補足情報
-%aside.app-banner
-  .app-banner__mobile
-    = link_to items_path do
-      %figure.app-banner__icon
-        = image_tag "/mercari_icon.png", width: "50"
-      .app-banner__text
-        スマホかんたんフリマアプリ
-        %span 今すぐ無料ダウンロード!
-/ 補足情報 ここまで
-/ フッター
-%footer#footer-wrap
-  %nav#footer-nav.clearfix
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-  .footer-bottom
-    = link_to items_path do
-      = image_tag "/footer-logo.png", height: "33", width: "124"
-    %span.copy-right
-      %small ©︎ 2019 Mercari
-/ フッター ここまで
-/ 出品ボタン
-= link_to items_path, class: "exhibit-btn" do
-  %div 出品
-  %i.fa.fa-camera
-/ 出品ボタン ここまで
+= render 'shared/footer'

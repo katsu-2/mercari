@@ -169,6 +169,19 @@
   font-weight: 600;
 }
 
+.item-not-buy-btn {
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  margin: 16px 0 0;
+  background: #888888;
+  color: #fff;
+  line-height: 56px;
+  text-align: center;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
 
 .item-description {
   padding: 32px 0 0;

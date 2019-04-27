@@ -12,8 +12,6 @@ class ItemsController < ApplicationController
     @men_child = Category.where(parent_id: "78").pluck(:id)
     @men_g_child = Category.where(parent_id: @men_child).pluck(:id)
     @men_items = Item.where(category_id: @men_g_child).recent
-
-  # binding.pry
   end
 
   def show
