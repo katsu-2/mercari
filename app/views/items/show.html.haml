@@ -32,11 +32,16 @@
           .item-photo__stage__item
             .item-photo__stage__item__inner
               = image_tag @item.images[0]
+              - if @item.status == "sold"
+                .item-photo__stage__item__inner__budge
+                .item-photo__stage__item__inner__sold
+                  SOLD
         .item-photo__dots
           - @item.images.each do |image|
             .item-photo__dots__dot
               .item-photo__dots__dot__inner
                 = image_tag image
+
       %table.item-detail-table
         %tbody
           %tr
