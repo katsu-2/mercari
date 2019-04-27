@@ -1,52 +1,40 @@
 = render partial: "shared/header"
 
-/ ヘッダーここまで
-/ メインイメージ
 %section#main-image
   = image_tag "/mainImage.jpg"
-/ メインイメージ ここまで
-/ カテゴリー新着アイテム
+
 %section#pick-up-container
   %h2.pick-up-head ピックアップカテゴリー
-  / レディースアイテム新着アイテム
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "レディース 新着アイテム", items_path
-    = render partial: 'index'
+    = render partial: 'index', locals: { items: @women_items }
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
-  / レディースアイテム新着アイテム ここまで
-  / メンズアイテム新着アイテム
+
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "メンズ 新着アイテム", items_path
-    = render partial: 'index'
-
+    = render partial: 'index', locals: { items: @men_items }
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
-  / メンズアイテム新着アイテム ここまで
-/ カテゴリー新着アイテム ここまで
-/ カテゴリー新着アイテム
+
+
 %section#pick-up-container
   %h2.pick-up-head ピックアップブランド
-  / コーチ新着アイテム
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "コーチ 新着アイテム", items_path
-    = render partial: 'index'
-
+    / = render partial: 'index'
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
-  / コーチ新着アイテム ここまで
-  / ルイヴィトン新着アイテム
+
   %section.items-box-container.clearfix
     %h3.items-head
       = link_to "ルイヴィトン 新着アイテム", items_path
-    = render partial: 'index'
-
+    / = render partial: 'index'
     .view-all.clearfix
       = link_to "全ての商品を見る", items_path
-  / ルイヴィトン新着アイテム ここまで
-/ ブランド新着アイテム ここまで
+
 
 = render 'shared/footer'

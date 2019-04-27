@@ -1,13 +1,16 @@
 .items-box-contents.clearfix
-  %section.items-box
-    = link_to items_path do
-      %figure.items-box__image
-        = image_tag "/item.jpg"
-      .items-box__body
-        %h3.items-box__body__name チェックロングタイプ
-        .items-box__body__info.clearfix
-          .items-box__body__info__price ¥890
-          .items-box__body__info__likes
-            %i.fa.fa-heart
-            %span 2
-          %p.items-box__body__info__tax (税込)
+  - items.each do |item|
+    %section.items-box
+      = link_to items_path do
+        %figure.items-box__image
+          = image_tag item.images[0]
+        .items-box__body
+          %h3.items-box__body__name
+            = item.name
+          .items-box__body__info.clearfix
+            .items-box__body__info__price
+            ¥ #{item.price}
+            .items-box__body__info__likes
+              %i.fa.fa-heart
+              %span 2
+            %p.items-box__body__info__tax (税込)

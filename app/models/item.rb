@@ -50,5 +50,5 @@ class Item < ApplicationRecord
     self.price = (price * 1.08).round
   end
 
-  scope :recent, -> {order('created_at desc')}
+  scope :recent, -> {order('created_at desc').limit(4)}
 end

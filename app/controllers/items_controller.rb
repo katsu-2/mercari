@@ -5,8 +5,13 @@ class ItemsController < ApplicationController
 
 
   def index
-    @women = Category.find(1)
-    @women_child = @women.children
+    @women_child = Category.where(parent_id: "1").pluck(:id)
+    @women_g_child = Category.where(parent_id: @women_child).pluck(:id)
+    @women_items = Item.where(category_id: @women_g_child).recent
+
+    @men_child = Category.where(parent_id: "78").pluck(:id)
+    @men_g_child = Category.where(parent_id: @men_child).pluck(:id)
+    @men_items = Item.where(category_id: @men_g_child).recent
 
   # binding.pry
   end
