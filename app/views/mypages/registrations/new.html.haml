@@ -13,7 +13,7 @@
               = fa_icon "facebook"
               Facebookで登録
         %button#google-login.btn-default.btn-sns.btn-sns-google
-          = link_to user_google_omniauth_authorize_path, class: "btn-sns-google__icon" do
+          = link_to user_google_oauth2_omniauth_authorize_path, class: "btn-sns-google__icon" do
             = fa_icon "google"
             Googleで登録
 = render 'shared/footer2'

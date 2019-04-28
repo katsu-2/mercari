@@ -10,7 +10,7 @@
           = fa_icon "facebook", class: "btn-sns-facebook__icon"
           Facebookでログイン
       %button#google-login.btn-default.btn-sns.btn-sns-google
-        = link_to user_google_omniauth_callback_path, id: "google-login" do
+        = link_to user_google_oauth2_omniauth_authorize_path, id: "google-login" do
           = fa_icon "google", class: "btn-sns-google__icon"
           Googleでログイン
     = form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f|
