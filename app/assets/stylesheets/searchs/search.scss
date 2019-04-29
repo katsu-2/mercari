@@ -1,0 +1,154 @@
+.search--around {
+  display: flex;
+  width: 60%;
+  margin: 50px auto;
+
+  .s--left {
+    width: 25%;
+    height: 900px;
+    margin-right: auto;
+
+    &__sort {
+      background: white;
+      width: 100%;
+      height: 80px;
+    }
+
+    &__search {
+      background: white;
+      width: 100%;
+      height: 100%;
+      margin-top: 40px;
+
+      &__title {
+        padding: 20px 20px 0;
+      }
+
+      &__word {
+        padding: 20px;
+
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+
+        }
+      }
+
+      &__category {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+          position: relative;
+          .arrow {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+          }
+        }
+      }
+
+      &__brand {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+
+        }
+      }
+
+      &__size {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+          position: relative;
+          .arrow {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+          }
+        }
+      }
+
+      &__price {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+          position: relative;
+          .arrow {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+          }
+          .small-input {
+            width: 40%;
+            height: 40px;
+            background: black;
+          }
+          span {
+
+          }
+          .small-input {
+
+          }
+        }
+      }
+    }
+  }
+
+  .s--right {
+    width: 68%;
+    background: #00ff721f;
+
+    &__result {
+      &__title {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.4;
+        margin: 0 0 8px 10px;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__one {
+        width: 160px;
+        margin: 10px auto;
+
+        &__p {
+          width: 160px;
+          height: 160px;
+          background: #ff000036;
+        }
+        &__body {
+          height: 110px;
+          background: #0000ff4f;
+        }
+      }
+    }
+  }
+}
