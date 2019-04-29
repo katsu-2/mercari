@@ -16,8 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
-
-
+  resources :searches, only: [:index, :create]
   resources :users, only:[:show]
   resources :logouts, only: [:index]
 
