@@ -12,18 +12,23 @@ crumb :profile do
   parent :show
 end
 
+crumb :usershipping do
+  link "発送元・お届け先住所の変更", mypages_editshipping_path
+  parent :show
+end
+
 crumb :userconfirm do
-  link "本人情報の登録", userconfirm_users_path
+  link "本人情報", mypages_identityinformation_path
   parent :show
 end
 
 crumb :userlogout do
-  link "ログアウト", userlogout_users_path
+  link "ログアウト", logouts_path
   parent :show
 end
 
 crumb :credit do
-  link "支払い方法", credit_card_index_path
+  link "支払い方法", mypages_credits_path
   parent :show
 end
 
