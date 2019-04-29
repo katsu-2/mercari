@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
     resources :credits, only: [:index, :new, :create]
-    resources :identityinformations, only: [:show]
+    resources :informations, only: [:show]
   end
 end
 

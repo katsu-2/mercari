@@ -18,7 +18,7 @@ crumb :usershipping do
 end
 
 crumb :userconfirm do
-  link "本人情報", mypages_identityinformation_path
+  link "本人情報", mypages_information_path
   parent :show
 end
 
