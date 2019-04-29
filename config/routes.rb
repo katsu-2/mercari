@@ -23,11 +23,12 @@ Rails.application.routes.draw do
 
   namespace :mypages do
     resources :profiles, only:[:show]
+    resources :editshippings, only:[:show]
     resource :registrations, only: [:new, :create]
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
     resources :credits, only: [:index, :new, :create]
-    resource :identityinformations, only: [:show]
+    resources :identityinformations, only: [:show]
   end
 end
 
