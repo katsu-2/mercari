@@ -1,12 +1,12 @@
 .search--around {
   display: flex;
-  width: 70%;
+  width: 60%;
   margin: 50px auto;
 
   .s--left {
-    background: #ff000036;
     width: 25%;
-    height: 600px;
+    height: 900px;
+    margin-right: auto;
 
     &__sort {
       background: white;
@@ -19,13 +19,108 @@
       width: 100%;
       height: 100%;
       margin-top: 40px;
+
+      &__title {
+        padding: 20px 20px 0;
+      }
+
+      &__word {
+        padding: 20px;
+
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+
+        }
+      }
+
+      &__category {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+          position: relative;
+          .arrow {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+          }
+        }
+      }
+
+      &__brand {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+
+        }
+      }
+
+      &__size {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+          position: relative;
+          .arrow {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+          }
+        }
+      }
+
+      &__price {
+        padding: 20px;
+        &__label {
+          &__add {
+            font-weight: bold;
+          }
+        }
+
+        &__input {
+          position: relative;
+          .arrow {
+            position: absolute;
+            right: 10%;
+            top: 30%;
+          }
+          .small-input {
+            width: 40%;
+            height: 40px;
+            background: black;
+          }
+          span {
+
+          }
+          .small-input {
+
+          }
+        }
+      }
     }
   }
 
   .s--right {
-    width: 70%;
+    width: 68%;
     background: #00ff721f;
-    margin-left: auto;
 
     &__result {
       &__title {
