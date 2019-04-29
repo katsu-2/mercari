@@ -1,11 +1,21 @@
+
 %aside.app-banner
-  .app-banner__mobile
-    = link_to items_path do
-      %figure.app-banner__icon
-        = image_tag "/mercari_icon.png", width: "50"
-      .app-banner__text
-        スマホかんたんフリマアプリ
-        %span 今すぐ無料ダウンロード!
+  .app-banner__pc
+    .app-banner__pc__inner
+      %h2 スマホでかんたんフリマアプリ
+      %p 今すぐ無料ダウンロード！
+      .app-banner__icon.clearfix
+        %figure
+          = image_tag "topPage/mercari_icon.png", width: "68"
+        %ul.clearfix
+          %li
+            = link_to items_path do
+              = image_tag "topPage/appstore.png", width: "133"
+          %li
+            = link_to items_path do
+              = image_tag "topPage/google.png", width: "133"
+    %figure.asidemain
+      = image_tag "topPage/smartphone.png", width: "300"
 / 補足情報 ここまで
 / フッター
 %footer#footer-wrap
@@ -16,55 +26,63 @@
         %li
           = link_to "会社概要(運営会社)", items_path
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "採用情報", items_path
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "プレスリリース", items_path
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "公式ブログ", items_path
+        %li
+          = link_to "メルカリロゴ利用ガイドライン", items_path
+        %li.footer-social-link
+          = link_to items_path do
+            %i.fa.fa-twitter
+        %li.footer-social-link
+          = link_to items_path do
+            %i.fa.fa-facebook
     .footer-cell
-      %h2.footer-head メルカリについて
+      %h2.footer-head ヘルプ&ガイド
       %ul
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "メルカリガイド", items_path
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "らくらくメルカリ便", items_path
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "ゆうゆうメルカリ便", items_path
         %li
-          = link_to "会社概要(運営会社)", items_path
+          = link_to "大型メルカリ便", items_path
+        %li
+          = link_to "車体取引ガイド", items_path
+        %li
+          = link_to "メルカリあんしん・あんぜん宣言！", items_path
+        %li
+          = link_to "偽ブランド品撲滅への取り組み", items_path
+        %li
+          = link_to "メルカリボックス", items_path
     .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-    .footer-cell
-      %h2.footer-head メルカリについて
-      %ul
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
-        %li
-          = link_to "会社概要(運営会社)", items_path
+      %h2.footer-head プライバシーと利用規約
+      .inner-footer-cell
+        %ul
+          %li
+            = link_to "プライバシーポリシー", items_path
+          %li
+            = link_to "メルカリ利用規約", items_path
+          %li
+            = link_to "あんしんスマホサポート制度に関する利用特約", items_path
+          %li
+            = link_to "コンプライアンスポリシー", items_path
+      .inner-footer-cell
+        %ul
+          %li
+            = link_to "個人データの安全管理に関わる基本規約", items_path
+          %li
+            = link_to "特定商取引に関する表記", items_path
+          %li
+            = link_to "資金決済法に基づく表示", items_path
+          %li
+            = link_to "法令順守と犯罪抑止のために", items_path
+          %li
+            = link_to "返品・返金ポリシー", items_path
+
   .footer-bottom
     = link_to items_path do
       = image_tag "/footer-logo.png", height: "33", width: "124"
