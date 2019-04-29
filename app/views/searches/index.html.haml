@@ -2,8 +2,17 @@
 
 .search--around
   .s--left
+    / = search_form_for @search do
     .s--left__sort
     .s--left__search
+      %h3.s--left__search__title
+        詳細検索
+      .s--left__search__word
+        .s--left__search__word__label
+          %i.fas.fa-plus
+          .s--left__search__word__label
+        .s--left__search__word
+
   .s--right
     .s--right__result
       %h2.s--right__result__title
