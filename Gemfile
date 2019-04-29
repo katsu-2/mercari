@@ -83,6 +83,7 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'gretel', '~> 3.0', '>= 3.0.9'
 gem 'payjp', '~> 0.0.6'
 gem 'rb-readline', '~> 0.5.5'
+gem 'ransack', '~> 2.1', '>= 2.1.1'
 
 group :production do
   gem 'unicorn', '5.4.1'
