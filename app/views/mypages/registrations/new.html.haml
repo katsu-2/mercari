@@ -5,10 +5,10 @@
     .l--single--inner
       .l--single--inner__content
         = link_to new_user_registration_path, class: "btn-default btn-mail" do
-          = fa_icon 'envelope icon-mail'
+          %i.far.fa-envelope
           メールアドレスで登録
         %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-          = fa_icon "facebook", class: "btn-sns-facebook__icon"
+          %i.fab.fa-facebook-squere.btn-sns-facebook__icon
           Facebookで登録
         %button#google-login.btn-default.btn-sns.btn-sns-google
           Googleで登録

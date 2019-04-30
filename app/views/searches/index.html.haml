@@ -47,37 +47,9 @@
   .s--right
     .s--right__result
       %h2.s--right__result__title
-        検索結果 1~48件
+        = "検索結果#{@search_items.length}件"
     .s--right__item
-      - @search_items.each do |search_item|
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
+    = render partial: 'index', locals: { items: @search_items }
 
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
 
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
 
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
-
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
-
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
-
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
-
-        .s--right__item__one
-          %figure.s--right__item__one__p
-          .s--right__item__one__body
