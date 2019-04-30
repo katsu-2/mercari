@@ -2,7 +2,7 @@
 
 .search--around
   .s--left
-    = search_form_for @search, url: searches_path do |f|
+    = search_form_for @search, url: searches_path, method: :post do |f|
       .s--left__sort
       .s--left__search
         %h3.s--left__search__title
@@ -18,7 +18,8 @@
           .s--left__search__category__label
             = icon("fas", "list", class: "s-icon")
             %span.s--left__search__category__label__add カテゴリーを選択する
-          .s--left__search__category__input.input-default
+          .s--left__search__category__input.category__relative
+            = f.collection_select :category_id_eq, @category,:id, :name, { prompt: "---" }, { class: "input-default arrow-del category__parent" }
             = icon("fas", "chevron-down", class: "s-icon arrow")
 
         .s--left__search__brand
@@ -82,7 +83,7 @@
     .s--right__item
       - @items.each do |item|
         .s--right__item__one
-          = link_to '#' do
+          = link_to item_path(item) do
             %figure.s--right__item__one__p
               = image_tag item.images[0]
               - if item.status == "sold"

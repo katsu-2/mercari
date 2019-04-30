@@ -16,7 +16,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :searches, only: [:index, :create]
+  resources :searches, only: [:index, :create] do
+    collection do
+      post :get_category
+    end
+  end
   resources :users, only:[:show]
   resources :logouts, only: [:index]
 

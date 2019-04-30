@@ -40,6 +40,7 @@
 
       &__category {
         padding: 20px;
+
         &__label {
           &__add {
             font-weight: bold;
@@ -51,7 +52,7 @@
           .arrow {
             position: absolute;
             right: 10%;
-            top: 30%;
+            bottom: 25%;
           }
         }
       }
@@ -212,6 +213,7 @@
         margin: 10px auto;
 
         &__p {
+          position: relative;
           width: 160px;
           height: 160px;
 
@@ -222,11 +224,11 @@
           }
 
           &__budge {
-
+            @include budge;
           }
 
           &__sold {
-
+            @include sold
           }
         }
         &__body {
