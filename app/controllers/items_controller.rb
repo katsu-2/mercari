@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
 
   def index
+    @category_parents = Category.where(parent_id: "0")
     @women_child = Category.where(parent_id: "1").pluck(:id)
     @women_g_child = Category.where(parent_id: @women_child).pluck(:id)
     @women_items = Item.where(category_id: @women_g_child).recent
