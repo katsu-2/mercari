@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :categories, only: [:show]
+
 
 
   resources :users, only:[:show]
