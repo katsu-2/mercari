@@ -17,19 +17,18 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: [:show]
-
-
-
+  resources :searches, only: [:index, :create]
   resources :users, only:[:show]
   resources :logouts, only: [:index]
 
   namespace :mypages do
     resources :profiles, only:[:show]
+    resources :editshippings, only:[:show]
     resource :registrations, only: [:new, :create]
     resource :cellphones, only: [:new, :create]
     resource :addresses, only: [:new, :create]
     resources :credits, only: [:index, :new, :create]
-    resource :identityinformations, only: [:show]
+    resources :informations, only: [:show]
   end
 end
 

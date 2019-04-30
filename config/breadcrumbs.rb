@@ -2,27 +2,64 @@ crumb :root do
   link "メルカリ", root_path
 end
 
-# crumb :projects do
-#   link "Projects", projects_path
-# end
+crumb :show do
+  link "マイページ", user_path(current_user.id)
+  parent :root
+end
 
-# crumb :project do |project|
-#   link project.name, project_path(project)
-#   parent :projects
-# end
+crumb :profile do
+  link "プロフィール", mypages_profile_path
+  parent :show
+end
 
-# crumb :project_issues do |project|
-#   link "Issues", project_issues_path(project)
-#   parent :project, project
-# end
+crumb :usershipping do
+  link "発送元・お届け先住所の変更", mypages_editshipping_path
+  parent :show
+end
 
-# crumb :issue do |issue|
-#   link issue.title, issue_path(issue)
-#   parent :project_issues, issue.project
-# end
+crumb :userconfirm do
+  link "本人情報", mypages_information_path
+  parent :show
+end
 
-# If you want to split your breadcrumbs configuration over multiple files, you
-# can create a folder named `config/breadcrumbs` and put your configuration
-# files there. All *.rb files (e.g. `frontend.rb` or `products.rb`) in that
-# folder are loaded and reloaded automatically when you change them, just like
-# this file (`config/breadcrumbs.rb`).
+crumb :userlogout do
+  link "ログアウト", logouts_path
+  parent :show
+end
+
+crumb :credit do
+  link "支払い方法", mypages_credits_path
+  parent :show
+end
+
+crumb :creditregistration do
+  link "クレジットカード情報入力",new_credit_card_path
+  parent :credit
+end
+
+crumb :search do |keyword|
+  link params[:keyword], search_items_path
+  parent :root
+end
+
+crumb :category do |category|
+  link category.name, category_path
+  parent :root
+end
+
+crumb :middle_category do |middle_category|
+  link middle_category.name, middle_category_path
+  parent :category,middle_category.category
+end
+
+crumb :lower_category do |lower_category|
+  link lower_category.name, lower_category_path
+  parent :middle_category,lower_category.middle_category
+end
+
+
+
+crumb :brand do |brand|
+  link brand.name, brand_path
+  parent :root
+end

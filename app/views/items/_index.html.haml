@@ -1,0 +1,21 @@
+.items-box-contents.clearfix
+  - items.each do |item|
+    %section.items-box
+      = link_to item_path(item) do
+        %figure.items-box__image
+          = image_tag item.images[0]
+          - if item.status == "sold"
+            .items-box__image__budge
+            .items-box__image__sold
+              SOLD
+
+        .items-box__body
+          %h3.items-box__body__name
+            = item.name
+          .items-box__body__info.clearfix
+            .items-box__body__info__price
+            ¥ #{item.price}
+            .items-box__body__info__likes
+              %i.fa.fa-heart
+              %span 2
+            %p.items-box__body__info__tax (税込)

@@ -58,6 +58,14 @@
       height: 220px;
       object-fit: cover;
     }
+
+    &__budge {
+      @include budge;
+    }
+
+    &__sold {
+      @include sold;
+    }
   }
 
   &__body {

@@ -75,7 +75,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 gem 'erb2haml'
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem "jquery-rails"
 gem 'rails-i18n'
 gem 'enum_help'
@@ -83,7 +84,11 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'gretel', '~> 3.0', '>= 3.0.9'
 gem 'payjp', '~> 0.0.6'
 gem 'rb-readline', '~> 0.5.5'
+gem 'ransack', '~> 2.1', '>= 2.1.1'
+
 
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+

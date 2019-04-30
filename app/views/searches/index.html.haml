@@ -1,0 +1,82 @@
+= render 'shared/header'
+
+.search--around
+  .s--left
+    = search_form_for @search do |f|
+      .s--left__sort
+      .s--left__search
+        %h3.s--left__search__title
+          詳細検索
+        .s--left__search__word
+          .s--left__search__word__label
+            = icon("fas", "plus", class: "s-icon")
+            %span.s--left__search__word__label__add キーワードを追加する
+          .s--left__search__word__input
+            = f.search_field :name_cont, class: "input-default"
+
+        .s--left__search__category
+          .s--left__search__category__label
+            = icon("fas", "list", class: "s-icon")
+            %span.s--left__search__category__label__add カテゴリーを選択する
+          .s--left__search__category__input.input-default
+            = icon("fas", "chevron-down", class: "s-icon arrow")
+
+        .s--left__search__brand
+          .s--left__search__brand__label
+            = icon("fas", "tag", class: "s-icon")
+            %span.s--left__search__brand__label__add ブランド名から探す
+          .s--left__search__brand__input.input-default
+
+        .s--left__search__size
+          .s--left__search__size__label
+            = icon("fas", "tshirt", class: "s-icon")
+            %span.s--left__search__size__label__add サイズを指定する
+          .s--left__search__size__input.input-default
+            = icon("fas", "chevron-down", class: "s-icon arrow")
+
+        .s--left__search__price
+          .s--left__search__price__label
+            = icon("fas", "coins", class: "s-icon")
+            %span.s--left__search__price__label__add 価格
+          .s--left__search__price__input.input-default
+            = icon("fas", "chevron-down", class: "s-icon arrow")
+          .input-default.small-input
+          %span ~
+          .input-default.small-input
+
+  .s--right
+    .s--right__result
+      %h2.s--right__result__title
+        検索結果 1~48件
+    .s--right__item
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
+
+      .s--right__item__one
+        %figure.s--right__item__one__p
+        .s--right__item__one__body
