@@ -15,6 +15,21 @@
               = link_to '#' do
                 %i.fa.fa-list
                 %span カテゴリーから探す
+            %ul.category-parent-list
+              - @category_parents.each do |category_parent|
+                %li
+                  = link_to category_path(category_parent) do
+                    = category_parent.name
+                    %ul.category-children-list
+                      - category_parent.children.each do |category_child|
+                        %li
+                          = link_to category_path(category_child) do
+                            = category_child.name
+                            %ul.category-grand-children-list
+                              - category_child.children.each do |category_grand_child|
+                                %li
+                                  = link_to category_path(category_grand_child) do
+                                    = category_grand_child.name
           %li
             %h2
               = link_to '#' do
