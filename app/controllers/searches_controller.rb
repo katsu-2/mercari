@@ -6,11 +6,6 @@ class SearchesController < ApplicationController
     @search_items = Item.where('name LIKE(?)', "%#{params[:search]}%").limit(40)
   end
 
-  def search
-
-  end
-
-
   def create
   end
 end
