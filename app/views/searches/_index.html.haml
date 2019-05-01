@@ -1,12 +1,12 @@
-.items-box-contents.clearfix
+.items-box-contents-search.clearfix
   - items.each do |item|
-    %section.items-box
+    %section.items-box-search
       = link_to item_path(item) do
-        %figure.items-box__image
-          = image_tag item.images[0]
+        %figure.items-box-search__image
+          = image_tag item.images[0].variant(resize:'160x160').processed
           - if item.status == "sold"
-            .items-box__image__budge
-            .items-box__image__sold
+            .items-box-search__image__budge
+            .items-box-search__image__sold
               SOLD
 
         .items-box__body
@@ -19,3 +19,4 @@
               %i.fa.fa-heart
               %span 2
             %p.items-box__body__info__tax (税込)
+
