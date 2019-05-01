@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:show]
   resources :searches, only: [:index, :create]
+  get 'search' => 'searches#search'
   resources :users, only:[:show]
   resources :logouts, only: [:index]
 

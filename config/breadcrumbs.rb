@@ -1,3 +1,6 @@
+
+
+
 crumb :root do
   link "メルカリ", root_path
 end
@@ -33,8 +36,13 @@ crumb :credit do
 end
 
 crumb :creditregistration do
-  link "クレジットカード情報入力",new_credit_card_path
+  link "クレジットカード情報入力", new_credit_card_path
   parent :credit
+end
+
+crumb :itemshow do |item|
+  link item.name, items_path
+  parent :root
 end
 
 crumb :search do |keyword|

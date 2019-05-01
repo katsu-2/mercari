@@ -1,15 +1,13 @@
 / ヘッダー
 = render 'shared/header'
 / ヘッダーここまで
-
+/ = binding.pry
 / パンくずリスト
+- breadcrumb :itemshow,@item
 %nav.bread-crumb
   %ul
     %li.item-scope
-      = link_to "メルカリ", items_path
-      %i.fa.fa-chevron-right
-    %li.item-scope
-      = link_to "マイページ", items_path
+      = breadcrumbs separator: " &rsaquo; ", link_current: true
 / パンくずリスト
 
 
