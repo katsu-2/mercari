@@ -2,6 +2,7 @@ class Mypages::CreditsController < ApplicationController
   include Card
 
   def index
+    @category_parents = Category.where(parent_id: "0")
     @credits = Credit.all
   end
 
