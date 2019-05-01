@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     resource :addresses, only: [:new, :create]
     resources :credits, only: [:index, :new, :create]
     resources :informations, only: [:show]
+    resources :lists, only: [:show]
   end
 end
 
