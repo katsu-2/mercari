@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :set_category, only: :edit
+  before_action :set_category, only: [:edit, :show]
   before_action :set_category_parent, only: [:index, :show]
 
 
@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
