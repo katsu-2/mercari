@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  before_action :authenticate_user!
   include Card
 
   before_action :set_item, only: [:new, :create]
