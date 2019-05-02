@@ -1,4 +1,5 @@
 class Mypages::AddressesController < ApplicationController
-  def new
-  end
+  before_action :authenticate_user!
+
+  def new;end
 end

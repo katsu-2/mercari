@@ -1,4 +1,5 @@
 class Mypages::CreditsController < ApplicationController
+  before_action :authenticate_user!
   include Card
 
   def index
