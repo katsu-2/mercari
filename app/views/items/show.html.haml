@@ -1,15 +1,13 @@
 / ヘッダー
 = render 'shared/header'
 / ヘッダーここまで
-
+/ = binding.pry
 / パンくずリスト
+- breadcrumb :itemshow,@item
 %nav.bread-crumb
   %ul
     %li.item-scope
-      = link_to "メルカリ", items_path
-      %i.fa.fa-chevron-right
-    %li.item-scope
-      = link_to "マイページ", items_path
+      = breadcrumbs separator: " &rsaquo; ", link_current: true
 / パンくずリスト
 
 
@@ -48,35 +46,31 @@
             %th 出品者
             %td
               = link_to items_path do
-                congo  引っ越し売り切りスパート！
+                = @item.user.nickname
               %div
                 .item-user-ratings
-                  %i.fa.fa-angellist
+                  %i.fas.fa-smile-wink
                   %span 15
                 .item-user-ratings
-                  %i.fa.fa-angellist
+                  %i.fas.fa-meh
                   %span 0
                 .item-user-ratings
-                  %i.fa.fa-angellist
+                  %i.fas.fa-frown
                   %span 0
           %tr
             %th カテゴリー
             %td
-              = link_to items_path do
-                %div レディース
-              = link_to items_path do
+              = link_to category_path(@category_root) do
+                %div
+                  = @category_root.name
+              = link_to category_path(@category_parent) do
                 .item-detail-table-sub-category
                   %i.fa.fa-chevron-right
-                  トップス
-              = link_to items_path do
+                  = @category_parent.name
+              = link_to category_path(@category_present) do
                 .item-detail-table-sub-category
                   %i.fa.fa-chevron-right
-                  Tシャツ/カットソー(七分/長袖)
-          %tr
-            %th ブランド
-            %td
-              = link_to items_path do
-                %div シップス
+                  = @category_present.name
           %tr
             %th 商品のサイズ
             %td

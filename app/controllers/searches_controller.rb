@@ -2,17 +2,12 @@ class SearchesController < ApplicationController
   before_action :set_category, only: :index
 
   def index
+    @category_parents = Category.where(parent_id: "0")
     @search = Item.ransack(params[:q])
     @items = @search.result(distinct: true)
-    # @category = Category.where(parent_id: "0")
-
-    # binding.pry
+    @search_items = Item.where('name LIKE(?)', "%#{params[:search]}%").limit(40)
   end
 
-  # def create
-  #   @search = Item.ransack(search_params)
-  #   @items = @search.result(distinct: true)
-  # end
 
   def get_category
     @category_parent = Category.find(params[:category_id])
@@ -31,3 +26,6 @@ class SearchesController < ApplicationController
     @category = Category.all
   end
 end
+
+
+

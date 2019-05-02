@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
 
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-  before_action :set_category, only: :edit
+  before_action :set_category, only: [:edit, :show]
+  before_action :set_category_parent, only: [:index, :show]
 
 
   def index
@@ -99,6 +101,10 @@ class ItemsController < ApplicationController
 
     def uploaded_images
       params[:item][:images].map{|id| ActiveStorage::Blob.find(id)} if params[:item][:images]
+    end
+
+    def set_category_parent
+      @category_parents = Category.where(parent_id: "0")
     end
 
 end

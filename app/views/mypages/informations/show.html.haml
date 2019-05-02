@@ -4,17 +4,15 @@
 / ヘッダーここまで
 
 / パンくずリスト
+- breadcrumb :userconfirm
 %nav.bread-crumb
   %ul
     %li.item-scope
-      = link_to "メルカリ", items_path
-      %i.fa.fa-chevron-right
-    %li.item-scope
-      = link_to "マイページ", items_path
+      = breadcrumbs separator: " &rsaquo; ", link_current: true
 / パンくずリスト
 .main-wrap
   %main.main-container.clearfix
-    .l-content-identifyinformations
+    .l-content-informations
       %h2.l-chapter-head 本人情報の登録
       %form.l-single-inner{action: "https://www.mercari.com/jp/mypage/identification/save/", method: "POST", novalidate: ""}
         %div

@@ -4,9 +4,10 @@
       #header-logo
         = link_to root_path do
           = image_tag "/logo.png"
-      %form#header-search-form
-        %input{name: "search", placeholder: "    何かお探しですか?", type: "search"}/
-        %i.fa.fa-search
+      = form_with url: searches_path, method: :get, local: true, id: "header-search-form" do |f|
+        = f.text_field :search, placeholder: "    何かお探しですか?"
+        = button_tag type: "submit", class: "search-button" do
+          %i.fa.fa-search
     #header-nav-box.clearfix
       %nav#header-nav
         %ul#header-nav__list
@@ -15,6 +16,21 @@
               = link_to '#' do
                 %i.fa.fa-list
                 %span カテゴリーから探す
+            %ul.category-parent-list
+              - @category_parents.each do |category_parent|
+                %li
+                  = link_to category_path(category_parent) do
+                    = category_parent.name
+                    %ul.category-children-list
+                      - category_parent.children.each do |category_child|
+                        %li
+                          = link_to category_path(category_child) do
+                            = category_child.name
+                            %ul.category-grand-children-list
+                              - category_child.children.each do |category_grand_child|
+                                %li
+                                  = link_to category_path(category_grand_child) do
+                                    = category_grand_child.name
           %li
             %h2
               = link_to '#' do

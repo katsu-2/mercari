@@ -61,17 +61,18 @@ header {
 
   &__list {
 
-    & li {
+    li {
       position: relative;
       display: inline-block;
       padding: 0 22px 0 0;
     }
 
-    & li h2{
+    li h2{
       font-weight: 400;
+      position: relative;
     }
 
-    & li h2 a{
+    li h2 a{
       display: block;
       position: relative;
       height: 42px;
@@ -79,19 +80,18 @@ header {
       color: #333;
     }
 
-    & li h2 a i{
+    li h2 a i{
       color: #EA352D;
       font-size: 12px;
       margin-right: 4px;
     }
 
-    & li h2 a span{
+    li h2 a span{
       vertical-align: middle;
       font-weight: bold;
     }
   }
 }
-
 
 
 #header-login {
@@ -104,6 +104,77 @@ header {
   padding: 0 7px;
   cursor: pointer;
 }
+
+.category-parent-list {
+  display:none;
+  position:absolute;
+  width: 200px;
+  height: auto;
+  background-color: #fff;
+  z-index: 10;
+
+  li {
+    display: block !important;
+    position: static !important;
+    height: 50px;
+    padding-left: 10px !important;
+    line-height: 50px;
+
+    a {
+      color: #000;
+    }
+  }
+
+  li:hover {
+    background-color:#ea352d;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.category-children-list {
+  display:none;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 200px;
+  height: auto;
+  background-color: #fff;
+
+  li {
+    height: 30px;
+    line-height: 30px;
+
+    a {
+      color: #000 !important;
+    }
+  }
+
+  li:hover {
+    background-color: #eee;
+
+    a {
+      color: #000;
+    }
+  }
+}
+
+.category-grand-children-list{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+
+  li {
+    color: #000;
+  }
+}
+
 
 .header-login-btn {
   display: block;
