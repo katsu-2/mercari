@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   has_many   :profits
   has_many   :likes
   belongs_to :user
-  has_many :carts
+  has_many :carts, dependent: :destroy
   belongs_to :category
 
   has_many_attached :images
