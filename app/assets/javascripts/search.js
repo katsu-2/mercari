@@ -3,7 +3,7 @@ $(function () {
   function buildHtmlAddSelectCategoryChildren() {
     var html = `
                 <div class="s--left__search__category__input__children category__relative">
-                  <select class="input-default arrow-del category__children" name="q[category_id_eq]" id="q_category_id_eq">
+                  <select class="input-default arrow-del category__children" name="q[category_children_id_eq]" id="q_category_id_eq">
                     <option value="">---</option>
                   </select>
                   <i class="fas fa-chevron-down s-icon arrow"></i>
@@ -15,7 +15,7 @@ $(function () {
   function buildHtmlAddSelectCategoryGrandChildren() {
     var html = `
                 <div class="s--left__search__category__input__grand__children category__relative">
-                  <select class="input-default arrow-del category__grand__children" name="q[category_id_eq]" id="q_category_id_eq">
+                  <select class="input-default arrow-del category__grand__children" name="q[category_grand_child_id_eq]" id="q_category_id_eq">
                     <option value="">---</option>
                   </select>
                   <i class="fas fa-chevron-down s-icon arrow"></i>

@@ -2,8 +2,9 @@
 
 .search--around
   .s--left
-    = search_form_for @search, url: searches_path, method: :post do |f|
+    = search_form_for @search, url: searches_path do |f|
       .s--left__sort
+        .input-default.sort_link
       .s--left__search
         %h3.s--left__search__title
           詳細検索
@@ -19,7 +20,7 @@
             = icon("fas", "list", class: "s-icon")
             %span.s--left__search__category__label__add カテゴリーを選択する
           .s--left__search__category__input.category__relative
-            = f.collection_select :category_id_eq, @category,:id, :name, { prompt: "---" }, { class: "input-default arrow-del category__parent" }
+            / = f.collection_select :category_id_eq, @category,:id, :name, { prompt: "---" }, { class: "input-default arrow-del category__parent" }
             = icon("fas", "chevron-down", class: "s-icon arrow")
 
         .s--left__search__brand
@@ -40,13 +41,13 @@
             = icon("fas", "coins", class: "s-icon")
             %span.s--left__search__price__label__add 価格
           .s--left__search__price__input
-            = f.select :price, {"選択してください": "---", "300 ~ 1000": "300 ~ 1000","1000 ~ 5000": "1000 ~ 5000","5000 ~ 10000": "5000 ~ 10000","10000 ~ 30000": "10000 ~ 30000", "30000 ~ 50000": "30000 ~ 50000","50000 ~": "50000 ~"},{},{class: "input-default"}
+            = f.select :price_eq, {"選択してください": "---", "300 ~ 1000": "300 ~ 1000","1000 ~ 5000": "1000 ~ 5000","5000 ~ 10000": "5000 ~ 10000","10000 ~ 30000": "10000 ~ 30000", "30000 ~ 50000": "30000 ~ 50000","50000 ~": "50000 ~"},{},{class: "input-default"}
           .s--left__search__price__max
             .low-input
-              = f.text_field :price_gteq, placeholder: "¥ Min",class: "low-price"
+              = f.number_field :price_gteq, placeholder: "¥ Min",class: "low-price"
             %span ~
             .high-input
-              = f.text_field :price_lteq, placeholder: "¥ Max",class: "high-price"
+              = f.number_field :price_lteq, placeholder: "¥ Max",class: "high-price"
 
         .s--left__search__condition
           .s--left__search__condition__label
@@ -54,7 +55,7 @@
             %span.s--left__search__condition__label__add 商品の状態
           - @items.conditions.each do |condition|
             .s--left__search__condition__input
-              = f.check_box :condition, {multiple: true},condition
+              / = f.check_box :condition, {multiple: true},condition
 
 
 
@@ -64,7 +65,7 @@
             %span.s--left__search__delivery__add 配送料の負担
           - @items.delivery_fees.each do |delivery|
             .s--left__search__delivery__input
-              = f.check_box :delivery_fee, { multiple: true }, delivery
+              / = f.check_box :delivery_fee, { multiple: true }, delivery
 
         .s--left__search__status
           .s--left__search__status__label
@@ -73,7 +74,7 @@
           .s--left__search__status__input
 
         .s--left__search__button
-          %span.s--left__search__button__clear-btn クリア
+          = link_to 'クリア', searches_path, class: "s--left__search__button__clear-btn"
           = f.submit '完了', class: "search-btn"
 
   .s--right
