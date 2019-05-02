@@ -11,7 +11,7 @@
       - @items.each do |items|
         - items.each do |item|
           %section.items-box
-            = link_to items_path do
+            = link_to item_path(item) do
               %figure.items-box__image
                 = image_tag item.images[0]
               .items-box__body
