@@ -49,7 +49,6 @@
             .high-input
               = f.number_field :price_lteq, placeholder: "¥ Max",class: "high-price"
 
-<<<<<<< HEAD
         .s--left__search__condition
           .s--left__search__condition__label
             = icon("fas", "star", class: "s-icon")
@@ -103,12 +102,3 @@
                   = icon("fa", "heart", class: "s-icon")
                   %span 2
                 %p.s--right__item__one__body__info__tax (税込)
-=======
-  .s--right
-    .s--right__result
-      %h2.s--right__result__title
-        = "検索結果#{@search_items.length}件"
-    .s--right__item
-      = render partial: 'index', locals: { items: @search_items }
-
->>>>>>> fa9e2e947ed72aeb9e2807f5d060be8cfccff122

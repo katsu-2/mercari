@@ -1,4 +1,5 @@
 class Mypages::InformationsController < ApplicationController
+  before_action :authenticate_user!
 
   def show
     @category_parents = Category.where(parent_id: "0")
