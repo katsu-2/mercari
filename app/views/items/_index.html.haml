@@ -14,7 +14,8 @@
             = item.name
           .items-box__body__info.clearfix
             .items-box__body__info__price
-            ¥ #{item.price}
+            ¥
+            = inserting_to_commma(item.price)
             .items-box__body__info__likes
               %i.fa.fa-heart
               %span 2
