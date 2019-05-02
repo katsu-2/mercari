@@ -2,8 +2,9 @@
 
 .search--around
   .s--left
-    = search_form_for @search do |f|
+    = search_form_for @search, url: searches_path do |f|
       .s--left__sort
+        .input-default.sort_link
       .s--left__search
         %h3.s--left__search__title
           詳細検索
@@ -12,13 +13,14 @@
             = icon("fas", "plus", class: "s-icon")
             %span.s--left__search__word__label__add キーワードを追加する
           .s--left__search__word__input
-            = f.search_field :name_cont, class: "input-default"
+            = f.search_field :name_cont, placeholder: "例）値下げ",class: "input-default"
 
         .s--left__search__category
           .s--left__search__category__label
             = icon("fas", "list", class: "s-icon")
             %span.s--left__search__category__label__add カテゴリーを選択する
-          .s--left__search__category__input.input-default
+          .s--left__search__category__input.category__relative
+            / = f.collection_select :category_id_eq, @category,:id, :name, { prompt: "---" }, { class: "input-default arrow-del category__parent" }
             = icon("fas", "chevron-down", class: "s-icon arrow")
 
         .s--left__search__brand
@@ -38,12 +40,70 @@
           .s--left__search__price__label
             = icon("fas", "coins", class: "s-icon")
             %span.s--left__search__price__label__add 価格
-          .s--left__search__price__input.input-default
-            = icon("fas", "chevron-down", class: "s-icon arrow")
-          .input-default.small-input
-          %span ~
-          .input-default.small-input
+          .s--left__search__price__input
+            = f.select :price_eq, {"選択してください": "---", "300 ~ 1000": "300 ~ 1000","1000 ~ 5000": "1000 ~ 5000","5000 ~ 10000": "5000 ~ 10000","10000 ~ 30000": "10000 ~ 30000", "30000 ~ 50000": "30000 ~ 50000","50000 ~": "50000 ~"},{},{class: "input-default"}
+          .s--left__search__price__max
+            .low-input
+              = f.number_field :price_gteq, placeholder: "¥ Min",class: "low-price"
+            %span ~
+            .high-input
+              = f.number_field :price_lteq, placeholder: "¥ Max",class: "high-price"
 
+<<<<<<< HEAD
+        .s--left__search__condition
+          .s--left__search__condition__label
+            = icon("fas", "star", class: "s-icon")
+            %span.s--left__search__condition__label__add 商品の状態
+          - @items.conditions.each do |condition|
+            .s--left__search__condition__input
+              / = f.check_box :condition, {multiple: true},condition
+
+
+
+        .s--left__search__delivery
+          .s--left__search__delivery__label
+            = icon("fas", "truck", class: "s-icon")
+            %span.s--left__search__delivery__add 配送料の負担
+          - @items.delivery_fees.each do |delivery|
+            .s--left__search__delivery__input
+              / = f.check_box :delivery_fee, { multiple: true }, delivery
+
+        .s--left__search__status
+          .s--left__search__status__label
+            = icon("fas", "shopping-cart", class: "s-icon")
+            %span.s--left__search__status__label__add 販売状況
+          .s--left__search__status__input
+
+        .s--left__search__button
+          = link_to 'クリア', searches_path, class: "s--left__search__button__clear-btn"
+          = f.submit '完了', class: "search-btn"
+
+  .s--right
+    .s--right__result
+      %h2.s--right__result__title
+        検索結果 1~48件
+    .s--right__item
+      - @items.each do |item|
+        .s--right__item__one
+          = link_to item_path(item) do
+            %figure.s--right__item__one__p
+              = image_tag item.images[0]
+              - if item.status == "sold"
+                .s--right__item__one__p__budge
+                .s--right__item__one__p__sold
+                  SOLD
+
+            .s--right__item__one__body
+              %h3.s--right__item__one__body__name
+                = item.name
+              .s--right__item__one__body__info
+                .s--right__item__one__body__info__price
+                  ¥ #{item.price}
+                .s--right__item__one__body__info__likes
+                  = icon("fa", "heart", class: "s-icon")
+                  %span 2
+                %p.s--right__item__one__body__info__tax (税込)
+=======
   .s--right
     .s--right__result
       %h2.s--right__result__title
@@ -51,3 +111,4 @@
     .s--right__item
       = render partial: 'index', locals: { items: @search_items }
 
+>>>>>>> fa9e2e947ed72aeb9e2807f5d060be8cfccff122

@@ -16,9 +16,15 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :searches, only: [:index, :create] do
+    collection do
+      post :get_category
+    end
+  end
+
   resources :categories, only: [:show]
   resources :searches, only: [:index, :create]
-  get 'search' => 'searches#search'
+
   resources :users, only:[:show]
   resources :logouts, only: [:index]
 
