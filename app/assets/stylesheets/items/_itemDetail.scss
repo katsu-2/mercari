@@ -67,7 +67,6 @@
     font-size: 0;
 
     &__dot {
-      opacity: 1;
       cursor: default;
       width: 60px;
       height: 60px;
@@ -85,6 +84,7 @@
         img {
           width: 100%;
           vertical-align: bottom;
+          opacity: 0.3;
         }
       }
     }
