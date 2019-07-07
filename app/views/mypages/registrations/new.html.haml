@@ -7,13 +7,11 @@
         = link_to new_user_registration_path, class: "btn-default btn-mail" do
           = fa_icon 'envelope icon-mail'
           メールアドレスで登録
-        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-          = link_to user_facebook_omniauth_authorize_path, class: "btn-sns-facebook" do
-            .btn-sns-facebook__icon
-              = fa_icon "facebook"
-              Facebookで登録
-        %button#google-login.btn-default.btn-sns.btn-sns-google
-          = link_to user_google_oauth2_omniauth_authorize_path, class: "btn-sns-google__icon" do
-            = fa_icon "google"
-            Googleで登録
+        = link_to user_facebook_omniauth_authorize_path, class: "btn-default btn-sns btn-sns-facebook" do
+          .btn-sns-facebook__icon
+            = fa_icon "facebook"
+            Facebookで登録
+        = link_to user_google_oauth2_omniauth_authorize_path, class: "btn-default btn-sns btn-sns-google" do
+          = fa_icon "google"
+          Googleで登録
 = render 'shared/footer2'
