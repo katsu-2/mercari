@@ -80,7 +80,7 @@ gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem "jquery-rails"
 gem 'rails-i18n'
 gem 'enum_help'
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'gretel', '~> 3.0', '>= 3.0.9'
 gem 'payjp', '~> 0.0.6'
 gem 'rb-readline', '~> 0.5.5'
